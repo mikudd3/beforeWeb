@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            height: 0;
+        }
+
+        .box {
+            height: 40px;
+            border: 1px solid #ccc;
+        }
+
+        ul {
+            list-style: none;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        ul li {
+            float: left;
+            width: 20%;
+            height: 40px;
+            border-right: 1px solid #ccc;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        ul .last {
+            border-right: none;
+        }
+        ul li a{
+            display: block;
+            height: 40px;
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li><a href="#">我要投资</a></li>
+            <li><a href="#">平台介绍</a></li>
+            <li><a href="#">新手专区</a></li>
+            <li><a href="#" class="app">手机微金所</a></li>
+            <li class="last"><a href="#">个人中心</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
