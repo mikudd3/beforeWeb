@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 链接有以下四个状态。这四种状态也称之为超链接的伪类。
+
+        状态	效果
+        a:link	普通的、未被访问的链接。
+        a:hover	鼠标指针位于链接的上方。
+        a:active	链接被单击的时刻。
+        a:visited	用户已访问的链接。 */
+        /* 状 态	    颜 色	背 景 色	文 本 修 饰
+        未访问	    蓝色	无	        无下画线
+        鼠标移到	黑色	#DDDDDD	    下画线
+        正单击	    红色	#AAAAAA	    删除线
+        已访问	    绿色	无	        无下画线 */
+        /* 对于超链接的伪类，我们推荐的使用顺序是：:link - :visited - :hover - :active。 */
+        * {
+            text-decoration: none;
+        }
+
+        a:link {
+            color: red;
+        }
+
+        a:visited {
+            color: blue;
+        }
+
+        a:hover {
+            color: green;
+        }
+
+        a:active {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">这是一个链接</a>
+</body>
+
+</html>

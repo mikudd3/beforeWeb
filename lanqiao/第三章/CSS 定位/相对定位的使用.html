@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100%;
+      }
+      .ad-l {
+        /* 相对定位是该元素的位置相对于它原始的位置来计算的。
+        position 属性为我们提供了 relative 属性值来设置元素的相对属性。 */
+        position: relative;
+
+        left: -40px;
+      }
+      .ad-r {
+        position: relative;
+
+        left: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="https://labfile.oss.aliyuncs.com/courses/2841/ad-l.png" class="ad-l" />
+    <img src="https://labfile.oss.aliyuncs.com/courses/2841/ad-r.png" class="ad-r" />
+    <div class="box">
+      <img src="https://labfile.oss.aliyuncs.com/courses/2841/box.png" />
+    </div>
+  </body>
+</html>
