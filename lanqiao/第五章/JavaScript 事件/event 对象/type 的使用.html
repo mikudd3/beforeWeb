@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>type 的使用</title>
+    <style></style>
+    <script>
+        window.onload = function () {
+            var value = document.getElementById("btn");
+            value.onclick = function (e) {
+                console.log("这是一个" + e.type + "事件"); // 控制台打印事件类型
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <input type="button" value="点击" id="btn" />
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function myFunction1() {
+            alert("你好！");
+
+        }
+
+        //输入对话框
+        function myFunction2() {
+            var info;
+
+            var name = prompt("请输入你的名字", "");
+
+            info = "欢迎" + name + "的到来！";
+
+            document.getElementById("demo").innerHTML = info;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="demo"></div>
+
+    <input type="button" onclick="myFunction2()" value="欢迎">
+
+    <input type="button" onclick="myFunction1()" value="点我">
+
+</body>
+
+</html>

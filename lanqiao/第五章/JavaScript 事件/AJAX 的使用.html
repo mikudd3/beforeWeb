@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX 的使用</title>
+    <script>
+        window.onload = function () {
+            if (window.XMLHttpRequest) {
+                // Mozilla，Safari，IE7+ 等浏览器适用
+                var httpRequest = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
+                // IE 6 或者更老的浏览器适用
+                var httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            // 规定发送请求的一些要求
+            httpRequest.open(
+                "GET",
+                "https://jsonplaceholder.typicode.com/users",
+                true
+            );
+            // 将请求发送到服务器
+            httpRequest.send();
+            httpRequest.onreadystatechange = function () {
+                console.log(httpRequest.readyState);
+                console.log(httpRequest.status);
+                if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                    // 请求成功执行的代码
+                    document.getElementById("item").innerHTML = "请求成功";
+                } else {
+                    // 请求失败执行的代码
+                    document.getElementById("item").innerHTML = "请求失败";
+                }
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <div id="item"></div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="btn" type="button" value="点我" />
+    <script>
+        document.getElementById("btn").onclick = function () {
+            alert("1");
+        };
+        document.getElementById("btn").addEventListener("click", function () {
+            alert("2");
+        });
+        document.getElementById("btn").addEventListener("click", function () {
+            alert("3");
+        });
+    </script>
+    <!-- <input id="btn" type="button" value="按钮" />
+    <script>
+        var btn = document.getElementById("btn");
+        btn.addEventListener("click", handler, false);
+        function handler() {
+            alert("已点击");
+            document
+                .getElementById("btn")
+                .removeEventListener("click", handler, false);
+        }
+    </script> -->
+
+</body>
+
+</html>

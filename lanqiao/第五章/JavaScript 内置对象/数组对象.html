@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //slice()
+        //slice() 是用来做数组切片操作的，也就是取数组中的部分值
+        var arr = ["苹果", "梨子", "橙子", "葡萄", "樱桃", "芒果"];
+        document.write(arr.slice(1, 4));
+        document.write("<br>");
+
+        //unshift()
+        //unshift() 可以在数组的头部增加新的元素。
+        var arr = ["苹果", "梨子", "橙子", "葡萄", "樱桃", "芒果"];
+        arr.unshift("释迦果");
+        document.write(arr);
+        document.write("<br>");
+
+        //shift()
+        // shift() 可以删除数组的首元素。
+        var arr = ["苹果", "梨子", "橙子", "葡萄", "樱桃", "芒果"];
+        arr.shift();
+        document.write(arr);
+        document.write("<br>");
+
+        //sort()
+        //sort() 可以给数组中的元素从小到大进行排序。
+        var arr = [2, 3, 4, 8, 1];
+        document.write(arr.sort());
+        document.write("<br>");
+
+        //reverse()
+        //reverse() 可以将数组中的元素进行逆序排列。
+        var arr = ["一", "二", "三", "四"];
+        document.write(arr.reverse());
+        document.write("<br>");
+
+        //join()
+        //join() 可以将数组中的字符拼接成字符串。
+        var arr = ["H", "e", "l", "l", "o"];
+        document.write(arr.join(""));
+        document.write("<br>");
+
+        //获取数组的长度
+        //我们可以使用 length 来获取数组的长度。
+        var arr = ["苹果", "梨子", "橙子", "葡萄", "樱桃", "芒果"];
+        document.write("数组的长度为 " + arr.length);
+        document.write("<br>");
+
+        //concat()
+        //concat() 可以将两个数组拼接在一起。
+        var arr1 = ["柠檬", "苹果", "草莓"];
+        var arr2 = ["葡萄", "西瓜", "柚子"];
+        document.write(arr1.concat(arr2));
+        document.write("<br>");
+
+        //includes()
+        //includes() 可以用来判断该数组中是否包含某个元素。
+        var arr = ["柠檬", "苹果", "草莓"];
+        document.write("水果清单里有西瓜吗？" + arr.includes("西瓜") + "<br>");
+        document.write("水果清单里有苹果吗？" + arr.includes("苹果"));
+        document.write("<br>");
+
+        //toString()
+        //toString() 可以将数组中的值转换成字符串类型。
+        var arr = ["Hello", "string"];
+        document.write("arr 的类型为 " + typeof arr + "<br>");
+        document.write("arr.toString() 的类型为 " + typeof arr.toString());
+        document.write("<br>");
+
+        //indexOf()
+        //indexOf() 可以用来查找指定元素的下标值。
+        var arr = ["梨子", "西瓜", "梨子", "葡萄", "柚子"];
+        document.write("返回梨子的索引：" + arr.indexOf("梨子") + "<br>");
+        document.write("返回樱桃的索引：" + arr.indexOf("樱桃"));
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

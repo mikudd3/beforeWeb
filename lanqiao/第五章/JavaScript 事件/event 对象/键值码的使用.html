@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload = function () {
+
+            var value = document.getElementById("item");
+
+            var value1 = document.getElementById("item1");
+
+            value.onkeydown = function (e) {
+                // 判断键入的是否为 shift、alt、ctrl
+                if (e.shiftKey || e.altKey || e.ctrlKey) {
+                    value1.innerHTML = "不能键入 shift|alt|ctrl";
+                    value1.style.color = "red";
+
+
+
+                } else {
+                    // 当键入的不为 shift、alt、ctrl 时，输出你的键入码
+                    value1.innerHTML = "你输入的键值码为：" + e.keyCode;
+                    value1.style.color = "black";
+                }
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <input type="text" id="item">
+
+    <p id="item1"></p>
+</body>
+
+</html>

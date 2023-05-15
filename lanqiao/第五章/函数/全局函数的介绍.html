@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // parseInt函数
+        //parseInt 用来解析字符串，并返回指定基数的十进制整数。
+        a = parseInt("151", 7);
+        document.write("parseInt('151',7) => " + a + "</br>");
+        b = parseInt("lotus", 7); // 如果第一个字符不能转换为数字，parseInt 会返回 NaN
+        document.write("parseInt('lotus',7) => " + b + "</br>");
+        c = parseInt("151", 1); // radix 的值不满足要求，会返回 NaN
+        document.write("parseInt('151',1) => " + c + "</br>");
+        d = parseInt("021", 8);
+        document.write("parseInt('021',8) => " + d + "</br>"); // 0*8^2+2*8^1+1*8^0=17
+
+
+        //parseFloat 的使用
+        //parseFloat 用来解析一个字符串参数并返回一个 number 类型的值，如果该字符串不能被解析，则会返回 NaN。
+        var b = "12.4";
+        document.write("b 的数据类型为：" + typeof b + "</br>");
+        var a = parseFloat(b);
+        document.write("parseFloat(b) 的数据类型为：" + typeof a + "</br>");
+        document.write("parseFloat(b) 的返回值为：" + a + "</br>");
+        var c = "lili";
+        document.write("parseFloat(c) 的返回值为：" + parseFloat(c));
+
+
+        //isNaN 的使用
+        //isNaN 用来判断一个值是否为 NaN，如果是，返回 true，反之为 false。
+        var a = parseFloat("lili");
+        document.write(
+            "parseFloat('lili') 的返回值为 NaN 吗？" + isNaN(a) + "</br>"
+        );
+        var b = parseInt("123", 3);
+        document.write("parseInt('123',3) 的返回值为 NaN 吗？" + isNaN(b));
+
+        //encodeURI 的使用
+        //encodeURI 是用来编码一个 URL，它会把 URL 中的一些特殊字符转换成转义序列，
+        //返回统一资源标识符的新字符串。但对于 ,、/、?、:、@、&、=、+、$、*、# 这些字符是不会被编码的
+        var url1 = encodeURI(
+            "https://www.lanqiao.cn/courses 45/123/learning/?id=110777&name=ß∂"
+        );
+        document.write(url1 + "<br/>"); // 包含需要转换的字符
+        var url2 = encodeURI(
+            "https://www.lanqiao.cn/courses/4838/learning*id_123"
+        );
+        document.write(url2); // 不包含需要转换的字符
+
+
+        //decodeURI 的使用
+        //decodeURI 作用与 encodeURI 的作用是相反的。decodeURI 用来把转换成统一资源标识符的字符串解码成原来的 url 字符。
+        var url1 = encodeURI(
+            "https://www.lanqiao.cn/courses 45/123/learning/?id=110777&name=ß∂"
+        );
+        document.write("编码后的字符串：" + url1 + "<br/>");
+        document.write("解码后的字符串：" + decodeURI(url1));
+
+
+        //eval 函数的使用
+        // eval 会把参数当作 JavaScript 代码来执行。
+        //如果参数是一个表达式，eval 会计算该表达式；如果参数是一个或者多个 JavaScript 语句，那么 eval 会去执行这些语句。
+        a = eval("4 * 8");
+        document.write("eval('4*8') => " + a + "</br>");
+
+        b = eval("parseFloat('lili')"); // 语句
+        document.write("eval(parseFloat('lili')) => " + b + "</br>");
+
+
+        c = eval(); //当为空时，输出 undefined
+        document.write("当 eval 为空 => " + c);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

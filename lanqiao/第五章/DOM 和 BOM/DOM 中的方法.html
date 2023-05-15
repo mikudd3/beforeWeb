@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 改变元素颜色
+        function changeColor() {
+            // 通过 id 改变指定元素的样式
+            document.getElementById("demo").style.color = "blue";
+        }
+
+        //创建一个指定名字的按钮
+        function createElem() {
+            // 创建元素节点
+            var btn = document.createElement("button");
+
+            // 创建文本节点
+            var t = document.createTextNode("确认");
+            btn.appendChild(t);
+
+            // 在 body 中添加一个元素。
+            document.body.appendChild(btn);
+
+        }
+
+        //在指定标签中添加内容
+        function addText() {
+            var e = document.getElementsByClassName("item");
+
+            e[0].innerHTML = "蓝桥云课是国内领先的 IT 在线编程及在线实训学习平台。";
+        }
+    </script>
+</head>
+
+<body>
+    <p id="demo">蓝桥云课</p>
+    <button onclick="changeColor()">改变颜色</button>
+    <button onclick="createElem()">创建元素</button>
+    <div class="item"></div>
+    <button onclick="addText()">添加内容</button>
+
+</body>
+
+</html>

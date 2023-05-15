@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Test() {
+            var str = "www.lanqiao.cn";
+
+            document.write("我最喜欢的网站：" + str + "<br>");
+        }
+
+        Test();
+
+        var str;
+
+        document.write("函数外部：" + str);
+
+        document.write("<br>");
+
+        var str = "www.lanqiao.cn";
+        document.write("函数外部：" + str + "<br>");
+        function Test() {
+            document.write("函数内部：" + str);
+        }
+        Test();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

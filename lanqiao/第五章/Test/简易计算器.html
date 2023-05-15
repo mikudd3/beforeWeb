@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn {
+            width: 70px;
+            height: 20px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload = function calc() {
+            var value = document.getElementById("btn");
+
+            value.onclick = function () {
+
+                var num1 = prompt("请输入第一个操作数：");
+
+                var op;
+                do {
+                    op = prompt("请输入操作符:(+,-,*,/)");
+                } while (op != "+" && op != "-" && op != "*" && op != "/");
+
+
+                var num2 = prompt("请输入第二个操作数：");
+                while (parseFloat(num2) == 0) {
+                    num2 = prompt("被除数不能为0，请重新输入：");
+                }
+
+                //将字符转换为数字
+                num1 = parseFloat(num1);
+                num2 = parseFloat(num2);
+
+                // 结果
+                var result;
+
+                switch (op) {
+                    case "+":
+                        result = num1 + num2;
+                        break;
+                    case "-":
+                        result = num1 - num2;
+                        break;
+                    case "*":
+                        result = num1 * num2;
+                        break;
+                    case "/":
+                        result = num1 / num2;
+                        break;
+                }
+
+                alert("计算结果为：" + result);
+            };
+
+        };
+    </script>
+</head>
+
+<body>
+    <button id="btn" onclick="calc()">JS计算器</button>
+</body>
+
+</html>

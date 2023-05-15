@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div><br>
+    <button onclick="myFunc()">创建元素</button><br>
+    <script>
+        function myFunc() {
+            //创建div元素
+            var e = document.createElement("div");
+            //将创建好的元素显示到界面上
+            document.body.appendChild(e);
+        }
+    </script>
+</body>
+
+</html>

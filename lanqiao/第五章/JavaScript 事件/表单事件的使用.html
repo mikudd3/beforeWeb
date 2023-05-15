@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            var name = document.getElementById("username");
+
+            name.onfocus = function () {
+                // 当聚焦到该输入框时，把输入框的内容置为空，并设置字体颜色为蓝色
+
+                if (name.value == "输入你的名字") {
+                    name.value = "";
+                }
+
+                //改变颜色
+                this.style.color = "#77acf1";
+            };
+
+            name.onblur = function () {
+                // 当失去焦点时，显示输入框的默认内容
+
+                if (name.value == "") {
+                    name.value = "输入你的名字";
+                }
+            };
+        };
+    </script>
+</head>
+
+<body>
+    姓名：
+    <input type="text" id="username" value="输入你的名字">
+</body>
+
+</html>
