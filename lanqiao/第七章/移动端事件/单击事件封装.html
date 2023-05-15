@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>移动端事件封装</title>
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+</body>
+<script>
+    // 定义一个大的事件对象，用于存放封装的移动端事件
+    var touchEvent = {
+        /*
+        tap:封装事件名称
+        element:dom元素
+        fn: fn 事件触发函数
+        */
+
+        /*单击事件封装*/
+        tap: function (element, fn) {
+            var startTx, startTy, endTx, endTy;
+            element.addEventListener(
+                "touchstart",
+                function (e) {
+                    var touches = e.touches[0];
+                    startTx = touches.clientX;
+                    startTy = touches.clientY;
+                },
+                false
+            );
+
+            element.addEventListener(
+                "touchend",
+                function (e) {
+                    var touches = e.changedTouches[0];
+                    endTx = touches.clientX;
+                    endTy = touches.clientY;
+
+                    //在部分设备上 touch 事件比较灵敏，导致按下和松开手指时的事件坐标会出现一点点变化
+
+                    if (Math.abs(startTx - endTx) < 10 && Math.abs(startTx - endTy) < 10) {
+                        fn();
+                    }
+                },
+                false
+            );
+        },
+    };
+
+    window.onload = function () {
+        var box = document.getElementById("box");
+
+        //调用tap对象
+        touchEvent.tap(box, function () {
+            alert("div被单击");
+        });
+    };
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>事件绑定</title>
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+</body>
+<script>
+    var box = document.getElementById("box");
+    box.addEventListener("touchstart", handleStart, false);
+    box.addEventListener("touchmove", handleMove, false);
+    box.addEventListener("touchend", handleEnd, false);
+
+
+    function handleStart(e) {
+        console.log("touchstart");
+    }
+    function handleMove(e) {
+        console.log("touchmove");
+    }
+    function handleEnd(e) {
+        console.log("handleEnd");
+    }
+</script>
+
+</html>

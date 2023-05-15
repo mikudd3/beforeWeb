@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Touch 事件</title>
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <p></p>
+</body>
+<script>
+    //获取div元素
+    var box = document.getElementById("box");
+    //获取p元素
+    var p = document.querySelector("p");
+    //绑定touchstart事件
+    box.addEventListener("touchstart", handleStart, false);
+    box.addEventListener("touchmove", handleMove, false);
+    box.addEventListener("touchend", handleEnd, false);
+
+    function handleStart(e) {
+        //得到touch对象
+        var touch = e.changedTouches[0];
+        var msg =
+            "id :" +
+            touch.identifier +
+            "<br>" +
+            "screenX : " +
+            touch.screenX +
+            "<br>" +
+            "screenY :" +
+            touch.screenY +
+            "<br>" +
+            "clientX :" +
+            touch.clientX +
+            "<br>" +
+            "clientY :" +
+            touch.clientY +
+            "<br>" +
+            "pageX : " +
+            touch.pageX +
+            "<br>" +
+            " pageY : " +
+            touch.pageY +
+            "<br>" +
+            "target: " +
+            touch.target.nodeName +
+            "<br>";
+        p.innerHTML = msg;
+    }
+    function handleMove(e) {
+        console.log("touchmove");
+    }
+    function handleEnd(e) {
+        console.log("touchend");
+    }
+</script>
+
+</html>

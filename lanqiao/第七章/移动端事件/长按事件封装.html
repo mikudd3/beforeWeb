@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>移动端事件封装</title>
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+</body>
+<script>
+    // 定义一个大的事件对象，用于存放封装的移动端事件
+    var touchEvent = {
+        /*
+          longTap：封装的事件名称
+          element ：dom元素
+          fn：fn 事件触发函数
+           */
+        /*长按事件封装*/
+        longTap: function (element, fn) {
+            var startTx, startTy, lTapTimer;
+            element.addEventListener(
+                "touchstart",
+                function (e) {
+                    if (lTapTimer) {
+                        clearTimeout(lTapTimer);
+                        lTapTimer = null;
+                    }
+                    var touches = e.touches[0];
+                    startTx = touches.clientX;
+                    startTy = touches.clientY;
+                    // 长按 750ms 才去执行 fn函数
+                    lTapTimer = setTimeout(function () {
+                        fn();
+                    }, 750);
+                },
+                false
+            );
+            element.addEventListener(
+                "touchmove",
+                function (e) {
+                    var touches = e.touches[0],
+                        endTx = touches.clientX,
+                        endTy = touches.clientY;
+                    // 在水平方向或者是垂直方向上，移动的距离 任意一个大于10，我们就不再认为是长按了，这里就要清除定时器
+                    if (
+                        lTapTimer &&
+                        (Math.abs(endTx - startTx) > 10 || Math.abs(endTy - startTy) > 10)
+                    ) {
+                        clearTimeout(lTapTimer);
+                        lTapTimer = null;
+                    }
+                },
+                false
+            );
+            element.addEventListener(
+                "touchend",
+                function (e) {
+                    if (lTapTimer) {
+                        clearTimeout(lTapTimer);
+                        lTapTimer = null;
+                    }
+                },
+                false
+            );
+        },
+    };
+
+    window.onload = function () {
+        var box = document.getElementById("box");
+        //长按测试
+        touchEvent.longTap(box, function () {
+            alert("div被长按");
+        });
+    };
+</script>
+
+</html>

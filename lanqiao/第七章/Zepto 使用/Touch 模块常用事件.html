@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>左滑显示删除按钮</title>
+    <script src="https://labfile.oss.aliyuncs.com/courses/3944/zepto.min.js"></script>
+    <script src="https://labfile.oss.aliyuncs.com/courses/3944/touch.js "></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        list-style: none;
+        line-height: 40px;
+        border-bottom: 1px solid #ddd;
+        padding: 0 4px;
+      }
+
+      .delete {
+        display: none;
+        padding: 4px 8px;
+        margin-left: 50%;
+        background: #dd4b4b;
+        font-size: 14px;
+        border-radius: 4px;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul id="items">
+      <li>头条新闻 <span class="delete">DELETE</span></li>
+      <li>最新资讯 <span class="delete">DELETE</span></li>
+    </ul>
+  </body>
+  <script>
+    // show delete buttons on swipeLeft
+    $("#items li").swipeLeft(function () {
+      $(".delete").hide();
+      $(".delete", this).show();
+    });
+    // delete row on tapping delete button
+    $(".delete").tap(function () {
+      $(this).parent("li").remove();
+    });
+  </script>
+</html>

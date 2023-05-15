@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Swipe Event</title>
+    <style>
+        #my-div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-div"></div>
+    <script>
+        var touchEvent = {
+            swipe: function (element, callback) {
+                var xDown = null;
+                var yDown = null;
+
+                element.addEventListener('touchstart', function (event) {
+                    xDown = event.touches[0].clientX;
+                    yDown = event.touches[0].clientY;
+                }, false);
+
+                element.addEventListener('touchend', function (event) {
+                    if (!xDown || !yDown) {
+                        return;
+                    }
+
+                    var xUp = event.changedTouches[0].clientX;
+                    var yUp = event.changedTouches[0].clientY;
+
+                    var xDiff = xUp - xDown;
+                    var yDiff = yUp - yDown;
+
+                    if (Math.abs(xDiff) > Math.abs(yDiff)) {
+                        if (Math.abs(xDiff) > 30) {
+                            callback();
+                        }
+                    } else {
+                        if (Math.abs(yDiff) > 30) {
+                            callback();
+                        }
+                    }
+
+                    xDown = null;
+                    yDown = null;
+                }, false);
+            }
+        };
+
+        var myDiv = document.getElementById('my-div');
+        touchEvent.swipe(myDiv, function () {
+            myDiv.style.backgroundColor = 'green';
+        });
+    </script>
+</body>
+
+</html>

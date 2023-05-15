@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>制作图片滑块验证码</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 480px;
+            height: 240px;
+            background-image: url("https://labfile.oss.aliyuncs.com/courses/3944/2-3-verify-1.jpg");
+        }
+
+        .buttonarea {
+            margin-top: 10px;
+            background: #F7F9FA;
+            height: 40px;
+            width: 480px;
+            line-height: 40px;
+            text-align: center;
+            position: relative;
+            font-weight: 300;
+            border: 1px solid #E3E7EB;
+        }
+
+        .buttonarea .trajectory {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgb(135 191 154);
+        }
+
+        .buttonarea .tip {
+            overflow: hidden;
+            padding-left: 20px;
+            color: #88949d;
+        }
+
+        .buttonarea .button {
+            width: 40px;
+            position: absolute;
+            top: 0;
+            background-color: #FFFFFF;
+            border: 0px solid #E3E7EB;
+            box-sizing: border-box;
+            cursor: move;
+            box-shadow: 0 0 3px rgb(0 0 0 / 30%);
+        }
+
+        .buttonarea .buttonsign {
+            display: block;
+            position: relative;
+            top: -1px;
+        }
+    </style>
+    <script>
+        var message = document.getElementById("message");
+        var maxW = 250;
+        document.getElementById("bar").addEventListener('touchstart', function (e) {
+            var ev = e || window.event;
+            var touch = ev.targetTouches[0];
+            oL = touch.clientX - bar.offsetLeft;
+        });
+        document.getElementById("bar").addEventListener('touchmove', function (e) {
+            var ev = e || window.event;
+            var touch = ev.targetTouches[0];
+            var oLeft = touch.clientX - oL;
+            if (oLeft < 0) {
+                oLeft = 0;
+            } else if (oLeft >= 250) {
+                oLeft = 250;
+            }
+            document.getElementById("process").style.width = oLeft + 'px';
+            document.getElementById("bar").style.left = oLeft + 'px';
+        });
+        document.getElementById("bar").addEventListener('touchend', function () {
+            if (Math.abs(parseInt(imgfront.style.left) - 153) > 2) {
+                alert("验证失败！");
+                document.getElementById("bar").style.left = '0px';
+                document.getElementById("process").style.width = '0px';
+            } else {
+                document.getElementById("process").style.backgroundColor = "#009933";
+                document.getElementById("bar").innerText = "√";
+                alert("验证成功！");
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <img src="https://labfile.oss.aliyuncs.com/courses/3944/2-3-verify-2.png" alt="">
+    </div>
+    <div class="buttonarea">
+        <div class="trajectory" id="process"></div>
+        <div class="tip">向右拖动滑块填充拼图</div>
+        <div class="button" id="bar" style="width: 59.28px; left: 0px;">
+            <span class="buttonsign">&gt;&nbsp;&gt;</span>
+        </div>
+    </div>
+</body>
+
+
+</html>

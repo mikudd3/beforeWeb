@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    </style>
+    <script>
+        function changeSize() {
+            var change = document.getElementById("changeSelect");
+            var size = change.value;
+            document.querySelector('html').style.fontSize = size;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="select">
+        试一试改变文字大小
+        <select onclick="changeSize()" id="changeSelect">
+            <option value="20px" selected>大</option>
+            <option value="16px">中</option>
+            <option value="14px">小</option>
+        </select>
+
+        <h1>这是一个巨大的标题</h1>
+        <p>Hey,我是一段很有意思的文字</p>
+    </div>
+</body>
+
+</html>

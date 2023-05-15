@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* rem 是另一个相对长度单位，
+        它的值同样也是并不固定，
+        是根据根元素 <html> 的 font-size 值进行计算。 */
+        html {
+            font-size: 14px;
+        }
+
+        .size1 {
+            font-size: 16px;
+        }
+
+        .size2 {
+            font-size: 18px;
+        }
+
+        .size3 {
+            font-size: 20px;
+        }
+
+        .size1 p {
+            font-size: 1rem;
+        }
+
+        .size2 p {
+            font-size: 2rem;
+        }
+
+        .size3 p {
+            font-size: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="size1">
+            <strong>1rem</strong>:
+            <p>1rem大小的文字</p>
+        </li>
+        <li class="size2">
+            <strong>2rem</strong>:
+            <p>2rem大小的文字</p>
+        </li>
+        <li class="size3">
+            <strong>3rem</strong>:
+            <p>3rem大小的文字</p>
+        </li>
+    </ul>
+</body>
+
+</html>
