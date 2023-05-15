@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            display: flex;
+            width: 1366px;
+            height: 600px;
+            margin: 100px auto;
+            background-image: url(./images/bg.jpg);
+
+            /* 将移出去的隐藏 */
+            overflow: hidden;
+        }
+
+        .box .left,
+        .box .right {
+            width: 50%;
+            height: 600px;
+            background-image: url(./images/fm.jpg);
+
+            /* 过度时间 */
+            transition: all 0.5s;
+        }
+
+        .box .right {
+            background-position: right 0;
+        }
+
+        .box:hover .left {
+            /* 向左移动 */
+            transform: translate(-100%);
+        }
+
+        .box:hover .right {
+            /* 向右移动 */
+            transform: translate(100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+
+</html>
