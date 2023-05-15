@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        var DB_NAME = "mikudd3"; //数据库名称
+        var DB_VERSION = 1; //数据库版本号
+        var DB_STORE_NAME = "test"; //数据仓库名称
+        var db; //db的容器，利用该容器，我们就可以进行数据库的下一步操作
+        // 打开我们的数据库
+        var request = window.indexedDB.open(DB_NAME, DB_VERSION);
+        // 数据库打开成功
+        request.onsuccess = function (event) {
+            db = request.result;
+            console.log("数据库打开成功");
+        };
+        // 数据库打开失败
+        request.onerror = function (event) {
+            console.log("数据库打开失败");
+        };
+        // 创建数据仓库
+        request.onupgradeneeded = function (event) {
+            db = event.target.result;
+            //建立一个数据仓库来存储我们学生的相关信息，我们选择 id 作为主键（key path）,因为 id 可以保证是不重复的
+            var store = db.createObjectStore(DB_STORE_NAME, { keyPath: "id" });
+            // 使用名字建立索引。名字可能会重复，所以我们不能使用 unique 索引
+            store.createIndex("name", "name", { unique: false });
+            // 使用邮箱建立索引，我们向确保学生的邮箱不会重复，所以我们使用 unique 索引
+            store.createIndex("email", "email", { unique: true });
+        };
+        const students = [
+            { id: 1, name: "张三", age: 18, email: "zhangsan@qq.com" },
+            { id: 2, name: "李四", age: 19, email: "lisi@88.com" },
+        ];
+        // 封装事务
+        function getObjectStore(store_name, mode) {
+            var tx = db.transaction(store_name, mode);
+            return tx.objectStore(store_name);
+        }
+        // 添加数据的函数
+        function addData() {
+            var store = getObjectStore("test", "readwrite"); // 获取我们要修改的数据仓库
+            students.forEach(function (stu) {
+                var request = store.add(stu); //逐条添加数据
+                request.onsuccess = function (event) {
+                    console.log("添加数据成功");
+                };
+            });
+        }
+        // 由于IndexedDB都是异步操作我们这里加入一个延时
+        setTimeout(() => {
+            addData();
+        }, 1000);
+
+
+        //此处省去之前的代码...
+        function readData(key) {
+            var store = getObjectStore(["test"], "readwrite");
+            var request = store.get(key);
+            request.onsuccess = function (event) {
+                if (request.result) {
+                    console.log("Name: " + request.result.name);
+                } else {
+                    console.log("未获得数据记录");
+                }
+            };
+            request.onerror = function (event) {
+                console.log("事务失败");
+            };
+        }
+        setTimeout(() => {
+            readData(1);
+        }, 1000);
+    </script>
+</head>
+
+<body></body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 网站总访问数
+    function numberOfVisited() {
+        var count = localStorage.getItem("numberOfVisited");
+
+        if (isNaN(count)) {
+            count = 0;
+        }
+
+        count++;
+        localStorage.setItem("numberOfVisited", count.toString());
+        return count;
+    }
+
+    //当前会话的访问数
+    function numberOfVisiting() {
+        var count = sessionStorage.getItem("numberOfVisiting");
+
+        if (isNaN(count)) {
+            count = 0;
+        }
+
+        count++;
+        sessionStorage.setItem("numberOfVisiting", count.toString());
+        return count;
+    }
+
+    console.log("网站总访问数：" + numberOfVisited())
+    console.log("网站当前会话访问数：" + numberOfVisiting())
+
+</script>
+
+</html>

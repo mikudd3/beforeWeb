@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        // 构建WebSocket对象
+        const socket = new WebSocket("ws://localhost:8081");
+
+        // 当一个 WebSocket 连接成功时触发
+        socket.addEventListener("open", function (event) {
+            console.log("open");
+            socket.send("Hello Server!");
+        });
+
+        // 当通过 WebSocket 收到数据时触发
+        socket.addEventListener("message", function (event) {
+            console.log("Message from server ", event.data);
+        });
+
+        // 当WebSocket 连接被关闭时触发
+        socket.addEventListener("close", function (event) {
+            console.log("close");
+        });
+
+        //当 WebSocket 连接因错误而关闭时触发
+        socket.addEventListener("error", function (event) {
+            console.log("WebSocket error:", event);
+        });
+    </script>
+</head>
+
+<body></body>
+
+</html>

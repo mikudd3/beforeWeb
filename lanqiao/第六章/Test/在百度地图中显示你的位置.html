@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>地图展示</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <style>
+    </style>
+    <script src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=UUuGDTj19jzaMDGAZbui1vWpTHy0SNF1"></script>
+</head>
+
+<body>
+    <div class="info"></div>
+    <div id="container"></div>
+</body>
+
+</html>
+<script>
+
+    var Latitude, Longitude;
+
+    //打印地理位置的经度和纬度
+    function printPosition(position) {
+        Latitude = position.coords.latitude;
+        Longitude = position.coords.longitude;
+        console.log("Latitude: " + position.coords.latitude);
+        console.log("Longitude: " + position.coords.longitude);
+    }
+
+    //打印错误信息
+    function errorPosition(error) {
+        var message = "";
+        switch (error.code) {
+            case 1:
+                message = "用户拒绝对获取地理位置的请求。";
+                break;
+            case 2:
+                message = "获取不到位置信息。";
+                break;
+            case 3:
+                message = "请求用户地理位置超时。";
+                break;
+            default:
+                message = "未知错误。";
+                break;
+        }
+        console.log("error: " + message);
+    }
+
+    //获取地理位置
+    function getLocation() {
+        //判断浏览器是否支持HTML5 Geolocation API
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                printPosition,
+                errorPosition
+            );
+        } else {
+            document.write("当前浏览器不支持HTML5 Geolocation");
+        }
+    }
+    getLocation();
+</script>

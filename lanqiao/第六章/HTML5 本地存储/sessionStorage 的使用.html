@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        //语句1： 保存数据到本地存储
+        sessionStorage.setItem("ShopId", "SH1290333211");
+        sessionStorage.ShopNumber = "10";
+        //语句2： 根据指定名称获取本地存储中的数据
+        var ShopId = sessionStorage.getItem("ShopId");
+        console.log(ShopId);
+        //语句3： 根据指定名称从本地存储中移除
+        sessionStorage.removeItem("ShopId");
+        //语句4： 清除本地存储中所有数据
+        sessionStorage.clear();
+    </script>
+</head>
+
+<body></body>
+
+</html>
