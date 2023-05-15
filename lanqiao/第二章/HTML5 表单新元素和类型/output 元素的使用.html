@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <form oninput="r.value=parseInt(num1.value)+parseInt(num2.value)">
+        <!--定义了两个 number 类型的输入框，其默认值为 100-->
+        <input type="number" id="num1" value="100" />
+        +
+        <input type="number" id="num2" value="100" />
+        =
+        <!--for 属性可以绑定对应 id 名的表单元素-->
+        <output name="r" for="num1 num2"></output>
+    </form>
+</body>
+
+</html>

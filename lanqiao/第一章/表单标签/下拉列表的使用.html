@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>请提交就业相关信息</h3>
+    <form>
+        <p>
+            学历：
+            <select name="edu">
+                <option value="0">初中</option>
+                <option value="1">高中</option>
+                <option value="2">大专</option>
+                <option value="3" selected="selected">本科</option>
+                <option value="4">硕士</option>
+                <option value="5">博士</option>
+                <option value="6">其他</option>
+            </select><br><br>
+            就业城市：
+            <select name="city" multiple="multiple">
+                <option value="A" selected="selected">北京</option>
+                <option value="B">上海</option>
+                <option value="C">深圳</option>
+                <option value="D">广州</option>
+                <option value="E">其他</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" name="submit" value="提交">
+        </p>
+    </form>
+</body>
+</html>

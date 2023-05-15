@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>个人信息表单</h1>
+    <form>
+        姓名：
+        <input type="text" id="name" placeholder="请输入姓名" autofocus><br><br>
+        学历：
+        <input type="text" id="edu" name="edu" list="eduList">
+        <datalist id="eduList">
+            <option>初中</option>
+            <option>高中</option>
+            <option>大专</option>
+            <option>本科</option>
+            <option>硕士</option>
+            <option>博士</option>
+            <option>其他</option>
+        </datalist><br><br>
+        电话：
+        <input type="tel" id="tel" name="tel" placeholder="请输入电话"
+            pattern="^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$"><br><br>
+        生日：
+        <input type="date" id="birthday" name="birthday" min="2000-01-01" max="2020-01-01"><br><br>
+
+        <input type="submit" value="提交">
+    </form>
+</body>
+
+</html>

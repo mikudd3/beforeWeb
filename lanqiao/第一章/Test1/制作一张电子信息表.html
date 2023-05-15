@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>制作一张电子信息表</title>
+</head>
+
+<body>
+    <form>
+        姓名：
+        <input type="text"><br><br>
+        密码：
+        <input type="password"><br><br>
+        性别：
+        <input type="radio" name="sex" value="male">男
+        <input type="radio" name="sex" value="male">女<br><br>
+        爱好：
+        <input type="checkbox" name="hobby" value="sing">唱歌
+        <input type="checkbox" name="hobby" value="dance">跳舞
+        <input type="checkbox" name="hobby" value="study">学习<br><br>
+        照片：
+        <input type="file" name="img" accept="img/gif,img/jpg"><br><br>
+        个人描述：
+        <textarea name="名称" cols="列数" rows="行数"></textarea><br><br>
+        籍贯：
+        <select name="city" multiple="multiple">
+            <option value="A" selected="selected">成都</option>
+            <option value="B">北京</option>
+            <option value="C">深圳</option>
+            <option value="D">广州</option>
+            <option value="E">其他</option>
+        </select><br><br>
+
+
+
+        <input type="submit" value="提交">  
+        <input type="reset" value="重置"> 
+    </form>
+</body>
+
+</html>

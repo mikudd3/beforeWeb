@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span.tooltip {
+            cursor: pointer;
+        }
+
+        .tooltip-info {
+            position: absolute;
+            top: -9999px;
+        }
+
+        span.tooltip::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            display: none;
+            color: white;
+            background: rgba(90, 176, 216, 0.75);
+        }
+
+        span:hover::before {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        欢迎来到
+        <span class="tooltip" data-tooltip="这是一个在线编程网站"><span class="tooltip-info">这是一个在线编程网站 </span>蓝桥云课</span>
+    </p>
+</body>
+
+</html>
