@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D导航</title>
+    <style>
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav {
+        width: 300px;
+        height: 40px;
+        margin: 50px auto;
+      }
+
+      .nav ul {
+        display: flex;
+      }
+
+      .nav li {
+        position: relative;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        transition: all 0.5s;
+
+        transform-style: preserve-3d;
+
+        /* 为了看到橙色和绿色的移动过程，给立方体添加旋转 */
+        /* transform: rotateX(-20deg) rotateY(30deg); */
+      }
+
+      .nav li a {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      /* 立方体每个面都有独立的坐标轴，互不影响 */
+      .nav li a:first-child {
+        background-color: green;
+        transform: translateZ(20px);
+      }
+
+      .nav li a:last-child {
+        background-color: orange;
+        transform: rotateX(90deg) translateZ(20px);
+      }
+
+      .nav li:hover {
+        transform: rotateX(-90deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <ul>
+        <li>
+          <a href="#">首页</a>
+          <a href="#">Index</a>
+        </li>
+        <li>
+          <a href="#">登录</a>
+          <a href="#">Login</a>
+        </li>
+        <li>
+          <a href="#">注册</a>
+          <a href="#">Register</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
