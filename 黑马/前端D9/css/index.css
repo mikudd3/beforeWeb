@@ -1,0 +1,167 @@
+/* 首页内容的样式 */
+/* banner */
+
+.banner {
+    height: 500px;
+    background-color: #F5F5F5;
+}
+
+/* 图片 */
+.banner .wrapper {
+    position: relative;
+    height: 500px;
+    /* 隐藏图片 */
+    overflow: hidden;
+}
+
+.banner .pic {
+    display: flex;
+    width: 3720px;
+}
+
+.banner .subnav {
+    /* 定位 */
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+.subnav li {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 12px;
+    line-height: 50px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.subnav li a {
+    margin-right: 5px;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.subnav li .classify {
+    margin-right: 14px;
+    font-size: 16px;
+}
+
+.subnav li .iconfont {
+    font-size: 14px;
+}
+
+.subnav li:hover {
+    background-color: #00BE9A;
+}
+
+
+
+.banner ol {
+    position: absolute;
+    bottom: 17px;
+    right: 16px;
+    display: flex;
+}
+
+.banner ol li {
+    margin-left: 8px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+}
+
+.banner li i {
+    display: block;
+    margin: 4px;
+    width: 14px;
+    height: 14px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+.banner li .current {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.banner li .current i {
+    background-color: #FFFFFF;
+}
+
+/* 新鲜好物 */
+/* 标题 */
+.title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    height: 42px;
+    /* background-color: pink; */
+}
+
+.title .left {
+    display: flex;
+}
+
+.title .left h3 {
+    margin-right: 35px;
+    font-size: 30px;
+}
+
+.title .left p {
+    align-self: flex-end;
+    color: #A1A1A1;
+}
+
+.title .right .more {
+    line-height: 42px;
+    color: #A1A1A1;
+}
+
+.title .right .more .iconfont {
+    margin-left: 10px;
+}
+
+/* 好物内容 -- 公共样式 */
+.bd ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bd li {
+    width: 304px;
+    height: 404px;
+    background-color: #EEF9F4;
+}
+
+.bd li .pic {
+    width: 304px;
+    height: 304px;
+}
+
+.bd li .txt {
+    text-align: center;
+}
+
+.bd li h4 {
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.goods .bd p {
+    font-size: 18px;
+    color: #AA2113;
+}
+
+.goods .bd p span {
+    margin-left: 3px;
+    font-size: 22px;
+}
+
