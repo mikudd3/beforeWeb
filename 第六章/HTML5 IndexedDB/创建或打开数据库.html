@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 数据库名
+        var DB_NAME = "mikudd3";
+
+        // 数据库版本号
+        var DB_VERSION = 1;
+
+        //db的容器，利用该容器，我们就可以进行数据库的下一步操作
+        var db;
+
+        // 打开我们的数据库
+        var request = window.indexedDB.open(DB_NAME, DB_VERSION);
+
+        // 数据库打开成功
+        request.onsuccess = function (event) {
+            db = request.result;
+
+            console.log("数据库打开成功");
+        }
+
+        // 数据库打开失败
+        request.onerror = function (event) {
+            console.log("数据库打开失败");
+        }
+
+        // 数据库第一次打开或者升级
+        request.onupgradeneeded = function (event) {
+            db = event.target.result;
+
+        };
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

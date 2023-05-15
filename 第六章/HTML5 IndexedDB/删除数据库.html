@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        var DB_NAME = "mikudd3";
+        var DB_VERSION = 1;
+        let db;
+        var request = window.indexedDB.open(DB_NAME, DB_VERSION);
+        // 数据库打开成功
+        request.onsuccess = function (event) {
+            console.log("打开成功");
+            db = request.result;
+            db.close();
+        };
+        // 数据库打开失败
+        request.onerror = function (event) { };
+        // 数据库第一次打开或者升级
+        request.onupgradeneeded = function (event) {
+            db = event.target.result;
+        };
+        // 删除数据库，由于IndexedDB都是异步操作我们这里加入一个延时
+        setTimeout(() => {
+            // 删除数据库
+            var DBDeleteRequest = window.indexedDB.deleteDatabase(DB_NAME);
+            DBDeleteRequest.onsuccess = function (event) {
+                console.log("删除成功");
+            };
+            DBDeleteRequest.onerror = function (event) {
+                console.log("删除失败");
+            };
+        }, 1000);
+    </script>
+</head>
+
+<body></body>
+
+</html>

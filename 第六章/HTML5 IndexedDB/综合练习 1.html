@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>HTML5 Web IndexedDB 数据库</title>
+
+    <script type="text/javascript">
+        // 声明数据库名称、仓库名称、数据库版本
+        const DB_NAME = "liaoqiaolibrary";
+        const DB_VERSION = 1;
+        const DB_STORE_NAME = "books";
+        var db, msg;
+        //创建数据库
+        var request = window.indexedDB.open(DB_NAME, DB_VERSION);
+        request.onsuccess = function (event) {
+            db = this.result;
+            console.log("数据库打开成功");
+        };
+        request.onerror = function (event) {
+            console.log("数据库打开失败");
+        };
+        const logs = [
+            { id: 1, name: "活着" },
+            { id: 2, name: "骆驼祥子" },
+        ];
+
+        request.onupgradeneeded = function (event) {
+            db = event.target.result;
+            //创建仓库和索引
+            var store = db.createObjectStore(DB_STORE_NAME, { keyPath: "id" });
+            store.createIndex("name", "name", { unique: false });
+        };
+        // 获取仓库
+        function getObjectStore(store_name, mode) {
+            var tx = db.transaction(store_name, mode);
+            return tx.objectStore(store_name);
+        }
+        //添加数据
+        function addData() {
+            var store = getObjectStore(DB_STORE_NAME, "readwrite");
+            logs.forEach(function (item) {
+                var request = store.add(item);
+                request.onsuccess = function (event) {
+                    msg = `<p>数据表已创建，且插入了两条数据。</p>`;
+                    document.getElementById("status").innerHTML = msg;
+                };
+            });
+        }
+        //读取数据
+        function readData(key) {
+            var store = getObjectStore(["test"], "readwrite");
+            var request = store.get(key);
+            request.onsuccess = function (event) {
+                if (request.result) {
+                    console.log("Name: " + request.result.name);
+                    msg = `<p>读取了id为1的数据,${request.result.name}</p>`;
+                    document.getElementById("status").innerHTML = msg;
+                } else {
+                    console.log("未获得数据记录");
+                }
+            };
+            request.onerror = function (event) {
+                console.log("事务失败");
+            };
+        }
+
+        setTimetout(() => {
+            addData();
+            readData(1);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="status" name="status">状态信息</div>
+</body>
+
+</html>

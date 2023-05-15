@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="getLocation()">获取地理位置</button>
+</body>
+<script>
+    //打印地理位置的经度和纬度
+
+    function printPosition(position) {
+        console.log("Latitude:" + position.coords.latitude);
+        console.log("Longitude:" + position.coords.longitude);
+
+    }
+    //打印错误信息
+    function errorPosition(error) {
+        var message = "";
+        switch (error.code) {
+            case 1:
+                message = "用户拒绝对获取地理位置的请求。";
+                break;
+            case 2:
+                message = "获取不到位置信息。";
+                break;
+            case 3:
+                message = "请求用户地理位置超时。";
+                break;
+            default:
+                message = "未知错误。";
+                break;
+        }
+        console.log("error: " + message);
+    }
+
+    //获取地理位置
+    function getLocation() {
+        //判断浏览器是否支持HTML5 Geolocation API
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                printPosition,
+                errorPosition
+            );
+        } else {
+            document.write("当前浏览器不支持HTML5 Geolocation");
+        }
+    }
+
+
+</script>
+
+</html>
