@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle {
+            width: 60px;
+            height: 60px;
+            /* 变成圆 */
+            border-radius: 100%;
+            background-color: #ffd8a6;
+            /* 规定 @keyframes 动画的名称。 */
+            animation-name: action;
+            /* 过渡时间,持续时间 */
+            /* 规定动画完成一个周期所花费的秒或毫秒。默认是 0。 */
+            animation-duration: 9s;
+            /* 规定动画被播放的次数。默认是 1。 */
+            animation-iteration-count: 10;
+
+        }
+
+        @keyframes action {
+            0% {
+                margin-left: 400px;
+            }
+
+            25% {
+                background-color: #dd7631;
+            }
+
+            50% {
+                border-radius: 10%;
+            }
+
+            100% {
+                margin: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle"></div>
+</body>
+
+</html>

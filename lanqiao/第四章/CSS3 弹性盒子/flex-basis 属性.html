@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #content {
+            width: 300px;
+            height: 300px;
+            color: black;
+            background-color: antiquewhite;
+            display: flex;
+        }
+
+        #content div {
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 40px;
+            width: 100px;
+        }
+
+        .left {
+            background-color: gray;
+        }
+
+        .center {
+            background-color: silver;
+        }
+
+        .right {
+            background-color: darkgray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <div class="left">div1块</div>
+        <div class="center">div2块</div>
+        <div class="right">div3块</div>
+    </div>
+</body>
+
+</html>

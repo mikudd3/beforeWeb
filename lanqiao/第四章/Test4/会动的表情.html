@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 背景 */
+        .bd {
+            width: 600px;
+            height: 400px;
+            background-color: #68B8ED;
+            display: flex;
+        }
+
+        .face {
+            /* 相对位置 */
+            position: relative;
+            /* 画圆 */
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            /* 居中 */
+            margin: auto;
+            background-color: #FFD47F;
+            box-shadow: 20px 0 20px 2px #335B75, -20px 0 0 2px #FFB010 inset;
+        }
+
+        .face:hover {
+            /* 相反方向转动 */
+            box-shadow: -20px 0 20px 2px #335B75, 20px 0 0 2px #FFB010 inset;
+            cursor: pointer;
+        }
+
+        .face .left-eye {
+            position: absolute;
+            top: 60px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 0 0 2px #335B75 inset;
+        }
+
+        .right-eye {
+            position: absolute;
+            top: 60px;
+            right: 78px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 0 0 2px #335B75 inset;
+        }
+
+        .pupil {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            bottom: 6px;
+            left: 7px;
+            border-radius: 50%;
+            background-color: #335B75;
+        }
+
+        .shine {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 8px;
+            height: 8px;
+            margin-left: -4px;
+            margin-top: -4px;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        .face:hover .pupil {
+            left: 14px;
+        }
+
+        .face:hover .left-eye {
+            left: 78px;
+        }
+
+        .face:hover .right-eye {
+            right: 30px;
+        }
+
+        .face:hover .mouth {
+            margin-left: 50px;
+
+        }
+
+        /* 嘴 */
+        .mouth {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border-bottom: 16px solid #533;
+            top: 80px;
+            left: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bd">
+        <!-- 脸 -->
+        <div class="face">
+            <!-- 左眼 -->
+            <span class="left-eye">
+                <!-- 瞳孔 -->
+                <span class="pupil">
+                    <!-- 瞳孔上的白点 -->
+                    <span class="shine"></span>
+                </span>
+            </span>
+            <!-- 右眼 -->
+            <span class="right-eye">
+                <!-- 瞳孔 -->
+                <span class="pupil">
+                    <!-- 瞳孔上的白点 -->
+                    <span class="shine"></span>
+                </span>
+            </span>
+
+            <!-- 嘴巴 -->
+            <span class="mouth"></span>
+        </div>
+    </div>
+</body>
+
+</html>

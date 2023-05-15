@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* 属性值	描述
+        clip	修剪文本。
+        ellipsis	显示省略符号来代表被修剪的文本。 */
+        p {
+            border: 1px solid blue;
+            width: 100px;
+            height: 50px;
+            overflow: hidden;
+            /*隐藏超出文本*/
+            white-space: nowrap;
+            /*强制单行显示*/
+        }
+
+        .poem1 {
+            text-overflow: clip;
+        }
+
+        .poem2 {
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="poem1">木落雁南度，北风江上寒。我家襄水曲，遥隔楚云端。</p>
+    <p class="poem2">乡泪客中尽，孤帆天际看。迷津欲有问，平海夕漫漫。</p>
+</body>
+
+</html>

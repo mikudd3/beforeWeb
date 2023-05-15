@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            height: 200px;
+        }
+
+        body>div {
+            display: flex;
+            width: 100px;
+            height: 100px;
+            border: 2px solid red;
+            box-sizing: border-box;
+            margin-right: 10px;
+        }
+
+        p {
+            width: 15px;
+            height: 15px;
+            background-color: black;
+            border-radius: 50%;
+            margin: 2px;
+        }
+
+        /* <!-- 骰子1 --> */
+        .div1 {
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* <!-- 骰子2 --> */
+        .div2 {
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* <!-- 骰子3 --> */
+        .div3 {
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .div3 :nth-child(1) {
+            align-self: flex-start;
+        }
+
+        .div3 :nth-child(3) {
+            align-self: flex-end;
+        }
+
+        /* <!-- 骰子4 --> */
+        .div4 {
+            justify-content: space-around;
+            /* align-items: center; */
+            flex-direction: column;
+        }
+
+        .div4 div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        /* <!-- 骰子5 --> */
+        .div5 {
+            justify-content: space-around;
+            /* align-items: center; */
+            flex-direction: column;
+        }
+
+        .div5 div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        /* <!-- 骰子6 --> */
+        .div6 {
+            justify-content: space-around;
+            /* align-items: center; */
+            flex-direction: column;
+        }
+
+        .div6 div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        /* <!-- 骰子7 --> */
+        .div7 {
+            justify-content: space-around;
+            /* align-items: center; */
+            flex-direction: column;
+        }
+
+        .div7 div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        /* <!-- 骰子8 --> */
+        .div8 {
+            justify-content: space-around;
+            /* align-items: center; */
+            flex-direction: column;
+        }
+
+        .div8 div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        /* <!-- 骰子9 --> */
+        .div9 {
+            justify-content: space-around;
+            /* align-items: center; */
+            flex-direction: column;
+        }
+
+        .div9 div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 骰子1 -->
+    <div class="div1">
+        <p></p>
+    </div>
+    <!-- 骰子2 -->
+    <div class="div2">
+        <p></p>
+        <p></p>
+    </div>
+    <!-- 骰子3 -->
+    <div class="div3">
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <!-- 骰子4 -->
+    <div class="div4">
+        <div>
+            <p></p>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+    <!-- 骰子5 -->
+    <div class="div5">
+        <div>
+            <p></p>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+    <!-- 骰子6 -->
+    <div class="div6">
+        <div>
+            <p></p>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+    <!-- 骰子7 -->
+    <div class="div7">
+        <div>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+    <!-- 骰子8 -->
+    <div class="div8">
+        <div>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+    <!-- 骰子9 -->
+    <div class="div9">
+        <div>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+</body>
+
+</html>

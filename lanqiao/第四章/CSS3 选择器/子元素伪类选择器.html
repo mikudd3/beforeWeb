@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 选择器	描述
+    E:first-child	选择元素 E 的第一个子元素。
+    E:last-child	选择元素 E 的最后一个子元素。
+    E:nth-child(n)	选择元素 E 的第 n 个子元素，n 有三种取值，数字、odd 和 even。注意第一个子元素的下标是 1。
+    E:only-child	选择元素 E 下唯一的子元素。
+    E:first-of-type	选择父元素下第一个 E 类型的子元素。
+    E:last-of-type	选择父元素下最后一个 E 类型的子元素。
+    E:nth-of-type(n)	选择父元素下第 n 个 E 类型的子元素，n 有三种取值，数字、odd 和 even。
+    E:only-of-type	选择父元素唯一的 E 类型的子元素。
+    E:nth-last-child(n)	选择所有 E 元素倒数的第 n 个子元素。
+    E:nth-last-of-type(n)	选择所有 E 元素倒数的第 n 个为 E 的子元素。
+   */
+    div {
+        width: 100px;
+        height: 100px;
+        margin-top: 10px;
+        background-color: rgb(0, 255, 242);
+    }
+
+    div:nth-child(2) {
+        background-color: rgb(0, 255, 128);
+    }
+
+    div:nth-of-type(4) {
+        background-color: rgb(111, 0, 255);
+    }
+</style>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* ackground-size 属性可以用来控制背景图像的显示大小。语法如下：
+
+        background-size: length|percentage|cover|contain;
+        copy
+        值	描述
+        length	设置背景图片高度和宽度。第一个值设置宽度，第二个值设置高度。如果只给出一个值，第二个是设置为 auto（自动）。
+        percentage	将计算相对于背景定位区域的百分比。第一个值设置宽度，第二个值设置高度。如果只给出一个值，第二个是设置为"auto（自动）" 。
+        cover	此时会保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小。
+        contain	此时会保持图像的纵横比并将图像缩放成将适合背景定位区域的最大大小。 */
+        div {
+            width: 350px;
+            height: 300px;
+            border: 1px solid;
+            color: rgba(0, 0, 0, 0.445);
+            background-image: url("https://labfile.oss.aliyuncs.com/courses/3773/j.jpg");
+            background-size: 350px 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>采桑子·荷花开后西湖好</h3>
+        荷花开后西湖好，载酒来时。不用旌旗，前后红幢绿盖随。<br />
+        画船撑入花深处，香泛金卮。烟雨微微，一片笙歌醉里归。
+    </div>
+</body>
+
+</html>

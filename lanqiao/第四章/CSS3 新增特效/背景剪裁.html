@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* background-clip 属性是用来定义背景图像裁剪区域的。
+
+        其语法格式为：
+
+        background-clip: border-box|padding-box|content-box;
+        copy
+        其属性值的意义如下所示：
+
+        值	说明
+        border-box	默认值，背景绘制在边框方框内（剪切成边框方框）。
+        padding-box	背景绘制在衬距方框内（剪切成衬距方框）。
+        content-box	背景绘制在内容方框内（剪切成内容方框）。 */
+        div {
+            border: 15px double #83a95c;
+            padding: 30px;
+            color: black;
+            background: #d6efc7;
+        }
+
+        #content2 {
+            background-clip: padding-box;
+        }
+
+        #content3 {
+            background-clip: content-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content1">
+        春华沧江月，秋色碧海云。离居盈寒暑，对此长思君。
+        思君楚水南，望君淮山北。梦魂虽飞来，会面不可得。
+        畴昔在嵩阳，同衾卧羲皇。绿萝笑簪绂，丹壑贱岩廊。
+        晚途各分析，乘兴任所适。仆在雁门关，君为峨眉客。
+    </div>
+    <br />
+    <div id="content2">
+        心悬万里外，影滞两乡隔。长剑复归来，相逢洛阳陌。
+        陌上何喧喧，都令心意烦。迷津觉路失，托势随风翻。
+        以兹谢朝列，长啸归故园。故园恣闲逸，求古散缥帙。
+        久欲入名山，婚娶殊未毕。人生信多故，世事岂惟一。
+    </div>
+    <br />
+    <div id="content3">
+        念此忧如焚，怅然若有失。闻君卧石门，宿昔契弥敦。
+        方从桂树隐，不羡桃花源。高风起遐旷，幽人迹复存。
+        松风清瑶瑟，溪月湛芳樽。安居偶佳赏，丹心期此论。
+    </div>
+</body>
+
+</html>

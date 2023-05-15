@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #item1 {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            margin: 100px;
+            padding: 10px;
+            border: 1px solid rgb(112, 170, 46);
+        }
+
+        #item2 {
+            padding: 50px;
+            position: absolute;
+            border: 1px solid rgb(48, 96, 128);
+            background-color: rgb(6, 85, 99);
+            transform: rotateY(60deg);
+            transform-style: preserve-3d;
+        }
+
+        #item3 {
+            padding: 40px;
+            position: absolute;
+            border: 1px solid rgb(68, 13, 105);
+            background-color: yellow;
+            transform: rotateY(-60deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="item1">
+        <div id="item2">
+            <div id="item3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

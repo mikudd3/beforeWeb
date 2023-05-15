@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            /* 盒子不扩张 */
+            box-sizing: border-box;
+            /* 居中 */
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            /* 背景 */
+            background-image: radial-gradient(circle at 50% 50%, #D797B2, #F18C58, #E6A877);
+            /*添加transition，让初始状态变化也具备缓慢的动画效果*/
+            transition: all 0.8s linear;
+            /* 阴影 */
+            box-shadow: 50px 0 50px 10px white, -50px 0 50px 10px #E6A877, 0 50px 50px 10px #838799, 0 -50px 50px 10px #838799;
+            /* 名字 */
+            animation-name: move;
+            /* 持续时间 */
+            animation-duration: 5s;
+            /* 次数 */
+            animation-iteration-count: infinite;
+        }
+
+        .dog {
+            /* 狗的位置 */
+            position: relative;
+            top: 100px;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            /* 名字 */
+            animation-name: run;
+            /* 时间 */
+            animation-duration: 10s;
+            /* 次数 */
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes run {
+
+            from {
+                transform-origin: center bottom;
+                /* 运动轨迹 */
+                transform: rotate(0deg) translate(0, -100px);
+            }
+
+            to {
+                transform-origin: center bottom;
+                /* 运动轨迹 */
+                transform: rotate(360deg) translate(0, -100px);
+            }
+        }
+
+        @keyframes move {
+            0% {
+                box-shadow: 50px 0 50px 10px white, -50px 0 50px 10px #E6A877, 0 50px 50px 10px #838799, 0 -50px 50px 10px #838799;
+            }
+
+            50% {
+                box-shadow: 0 0 50px 10px white, 0 0 50px 10px #E6A877, 0 0 50px 10px #838799, 0 0 50px 10px #838799;
+            }
+
+            100% {
+                box-shadow: 50px 0 50px 10px white, -50px 0 50px 10px #E6A877, 0 50px 50px 10px #838799, 0 -50px 50px 10px #838799;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img class="dog" src="https://labfile.oss.aliyuncs.com/courses/3429/dog.png" alt="">
+    </div>
+    <div>
+        <div class="circle"></div>
+    </div>
+</body>
+
+</html>

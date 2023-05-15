@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* background-origin 属性是用来定义背景位置区域的。
+
+        其语法格式为：
+
+        background-origin: border-box|padding-box|content-box;
+        copy
+        其属性值的意义如下所示：
+
+        属性值	描述
+        border-box	以边框作为原点来定位。
+        padding-box	以填充区为原点来定位。
+        content-box	以内容为原点来定位。 */
+        div {
+            padding: 30px;
+            background-image: url("https://labfile.oss.aliyuncs.com/courses/3429/icons8-seedling-96.png");
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: 50px 50px;
+        }
+
+        .content1 {
+            border: 1px solid rgb(13, 110, 73);
+            width: 300px;
+            height: 150px;
+            background-origin: border-box;
+            /*图片显示在边框处*/
+        }
+
+        .content2 {
+            border: 1px solid rgb(13, 110, 73);
+            width: 300px;
+            height: 150px;
+            margin-top: 20px;
+            background-origin: content-box;
+            /*图片显示在内容里*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content1">
+        春华沧江月，秋色碧海云。离居盈寒暑，对此长思君。
+        思君楚水南，望君淮山北。梦魂虽飞来，会面不可得。
+        畴昔在嵩阳，同衾卧羲皇。绿萝笑簪绂，丹壑贱岩廊。
+        晚途各分析，乘兴任所适。仆在雁门关，君为峨眉客。
+    </div>
+    <div class="content2">
+        心悬万里外，影滞两乡隔。长剑复归来，相逢洛阳陌。
+        陌上何喧喧，都令心意烦。迷津觉路失，托势随风翻。
+        以兹谢朝列，长啸归故园。故园恣闲逸，求古散缥帙。
+        久欲入名山，婚娶殊未毕。人生信多故，世事岂惟一。
+    </div>
+</body>
+
+</html>

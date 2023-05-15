@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        .gradient1 {
+            background: repeating-radial-gradient(closest-corner,
+                    #8843f8 0%,
+                    #ef2f88 5%,
+                    #f47340 10%,
+                    #f9d371 15%);
+        }
+
+        .gradient2 {
+            background: repeating-radial-gradient(farthest-side,
+                    #8843f8,
+                    #ef2f88,
+                    #f47340,
+                    #f9d371);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gradient1"></div>
+    <div class="gradient2"></div>
+</body>
+
+</html>

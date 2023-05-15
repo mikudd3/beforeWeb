@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* flex-direction 属性指定了弹性子元素在父容器中的排列方向和顺序。
+
+        其语法格式为：
+
+        flex-direction: row | row-reverse | column | column-reverse;
+        copy
+        其属性值的意义如下所示：
+
+        属性值	描述
+        row	横向从左到右排列（左对齐），默认的排列方式。
+        row-reverse	反转横向排列（右对齐），从后往前排，最后一项排在最前面。
+        column	纵向排列
+        column-reverse	反转纵向排列，从后往前排，最后一项排在最上面。 */
+        .content1 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #c3c3c3;
+            display: flex;
+            /*默认值，行对齐，主轴起点与终点相同*/
+            flex-direction: row;
+        }
+
+        .content2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #c3c3c3;
+            display: flex;
+            /*行对齐，主轴起点与终点相反*/
+            flex-direction: row-reverse;
+        }
+
+        .content3 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #c3c3c3;
+            display: flex;
+            /*列对齐，主轴起点与终点相同*/
+            flex-direction: column;
+        }
+
+        .content4 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #c3c3c3;
+            display: flex;
+            /*列对齐，主轴起点与终点相反*/
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content1">
+        <div class="box" style="background-color:#FFE5B9;">A</div>
+        <div class="box" style="background-color:#EFF8FF;">B</div>
+        <div class="box" style="background-color:#C9CBFF;">C</div>
+    </div>
+    <div class="content2">
+        <div class="box" style="background-color:#FFE5B9;">A</div>
+        <div class="box" style="background-color:#EFF8FF;">B</div>
+        <div class="box" style="background-color:#C9CBFF;">C</div>
+    </div>
+    <div class="content3">
+        <div class="box" style="background-color:#FFE5B9;">A</div>
+        <div class="box" style="background-color:#EFF8FF;">B</div>
+        <div class="box" style="background-color:#C9CBFF;">C</div>
+    </div>
+    <div class="content4">
+        <div class="box" style="background-color:#FFE5B9;">A</div>
+        <div class="box" style="background-color:#EFF8FF;">B</div>
+        <div class="box" style="background-color:#C9CBFF;">C</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        div {
+            width: 60px;
+            color: black;
+        }
+
+        #content {
+            width: 300px;
+            height: 300px;
+            background-color: antiquewhite;
+            display: flex;
+            /* 换行 */
+            flex-wrap: wrap;
+            /* 沿侧轴拉伸至铺满容器 */
+            align-content: stretch;
+        }
+
+        .left {
+            background-color: gray;
+        }
+
+        .center {
+            background-color: silver;
+        }
+
+        .right {
+            background-color: darkgray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <div class="left">div1块</div>
+        <div class="center">div2块</div>
+        <div class="right">div3块</div>
+        <div class="left">div4块</div>
+        <div class="center">div5块</div>
+        <div class="right">div6块</div>
+        <div class="left">div7块</div>
+        <div class="center">div8块</div>
+        <div class="right">div9块</div>
+        <div class="left">div10块</div>
+        <div class="center">div11块</div>
+        <div class="right">div12块</div>
+    </div>
+</body>
+
+</html>

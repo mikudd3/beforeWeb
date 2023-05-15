@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* 选择器	描述
+        :focus	给获取焦点的元素设置样式。
+        ::selection	给页面中被选中的文本内容设置样式。
+        :checked	给被选中的单选框或者复选框设置样式。
+        :enabled	给可用的表单设置样式。
+        :disabled	给不可用的表单设置样式。
+        :read-only	给只读表单设置样式。
+        :read-write	给可读写的表单元素设置样式。
+        :valid	验证有效。
+        :invalid	验证无效。 */
+        /*格式错误*/
+        input:invalid {
+            background-color: red;
+        }
+
+        /*格式正确*/
+        input:valid {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    电子邮箱：<input type="email" />
+</body>
+
+</html>

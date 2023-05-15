@@ -1,0 +1,235 @@
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: Arial;
+    font-size: 14px;
+    margin: 0;
+  }
+  a {
+    color: #000088;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  a.mode,
+  footer a {
+    color: #0000ff;
+  }
+  header {
+    margin: 20px 0 0 0;
+  }
+  #header_inner {
+    background-color: #edd;
+    border: 1px solid #800;
+  }
+  #menu_inner {
+    background-color: #eed;
+    border: 1px solid #880;
+  }
+  #article_inner {
+    background-color: #ded;
+    border: 1px solid #080;
+  }
+  #aside_inner {
+    background-color: #dee;
+    border: 1px solid #088;
+  }
+  footer {
+    clear: both;
+    margin: 0 0 20px 0;
+  }
+  #footer_inner {
+    background-color: #dde;
+    border: 1px solid #008;
+  }
+  #header_inner,
+  #menu_inner,
+  #article_inner,
+  #aside_inner,
+  #footer_inner {
+    padding: 1px 20px;
+  }
+  header h1 {
+    display: none;
+  }
+  .responsive header h1#header_responsive,
+  .static header h1#header_static {
+    display: block;
+  }
+  #overview {
+    border-top: 1px solid #080;
+    border-bottom: 1px solid #080;
+    zoom: 1;
+  }
+  #overview:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  #overview h1 {
+    display: none;
+  }
+  #overview p {
+    display: none;
+  }
+  #overview img {
+    display: none;
+    float: left;
+    margin: 20px 20px 20px 0;
+    width: 110px;
+  }
+  .responsive #overview .overview_responsive,
+  .static #overview .overview_static {
+    display: block;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 20px 0;
+  }
+  .block {
+    clear: both;
+    margin: 20px 0;
+    zoom: 1;
+  }
+  .block:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  .block h3 {
+    margin: 0;
+  }
+  .block p {
+    margin: 0 0 20px 0;
+  }
+  .block p.meta {
+    color: #888;
+    font-size: 80%;
+    margin: 0;
+  }
+  .responsive header {
+    margin: 20px 0 0 0;
+    padding: 0;
+    position: relative;
+  }
+  .responsive menu,
+  .responsive article,
+  .responsive aside,
+  .responsive footer {
+    margin: 20px 0;
+    padding: 0;
+  }
+  .static #page_wrapper {
+    margin: 0 auto;
+    width: 960px;
+  }
+  .static header {
+    padding: 0;
+    position: relative;
+  }
+  .static menu,
+  .static aside {
+    clear: none;
+    float: left;
+    margin: 20px 0;
+    padding: 0;
+    width: 200px;
+    zoom: 1;
+  }
+  .static aside {
+    float: right;
+  }
+  .static menu ul {
+    margin: 20px 0;
+    padding: 0;
+  }
+  .static menu ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .static menu ul li ul {
+    margin: 0 0 0 40px;
+  }
+  .static article {
+    clear: none;
+    float: left;
+    margin: 20px;
+    padding: 0;
+    width: 520px;
+  }
+  .static article .block img {
+    clear: left;
+    float: left;
+    width: 120px;
+    zoom: 1;
+  }
+  .static article .block .block_content {
+    clear: right;
+    margin-left: 140px;
+  }
+  .static article .block p.summary {
+    display: none;
+  }
+  .static #overview #layout_3 {
+    display: block;
+  }
+  .static aside .block img {
+    display: none;
+  }
+  .static aside .block p.main {
+    display: none;
+  }
+  .static footer {
+    clear: both;
+    padding: 0;
+  }
+  .responsive menu ul {
+    margin: 20px 0;
+    padding: 0;
+  }
+  .responsive menu ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .responsive menu ul li ul {
+    margin: 0 0 0 40px;
+  }
+  .responsive article .block img {
+    clear: left;
+    float: left;
+    width: 20%;
+    zoom: 1;
+  }
+  .responsive article .block .block_content {
+    clear: right;
+    margin-left: 20.1%;
+  }
+  .responsive article .block .block_content h3,
+  .responsive article .block .block_content p,
+  .responsive article .block .block_content a {
+    margin-left: 20px;
+  }
+  .responsive article .block p.summary {
+    display: none;
+  }
+  .responsive aside .block img {
+    display: none;
+  }
+  .responsive aside .block p.main {
+    display: none;
+  }
+  .responsive #page_wrapper {
+    margin: 0 20px;
+  }
