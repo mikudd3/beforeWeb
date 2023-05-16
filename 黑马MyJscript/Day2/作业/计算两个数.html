@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        while (true) {
+            let re = prompt(`
+            1. 输入 + - * / 计算两个数字的结果
+            2. 如果是q则是退出
+          `)
+            if (re === 'q') {
+                break
+            } else {
+                let x = +prompt('请输入第一个数字')
+                let y = +prompt('请输入第二个数字')
+                if (re === '+') {
+                    alert(`两个数的和是: ${x + y}`)
+                } if (re === '-') {
+                    alert(`两个数的差是: ${x - y}`)
+                } if (re === '*') {
+                    alert(`两个数的乘积是: ${x * y}`)
+                } if (re === '/') {
+                    alert(`两个数的求商是: ${x / y}`)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num1 = +prompt('请输入第一个数字：')
+        let op = prompt('请输入操作符：（+、-、*、/）')
+        let num2 = +prompt('请输入第二个数字：')
+
+        let result
+
+        switch (op) {
+            case '+':
+                result = num1 + num2
+                alert(`结果为${result}`)
+                break;
+            case '-':
+                result = num1 - num2
+                alert(`结果为${result}`)
+                break;
+            case '*':
+                result = num1 * num2
+                alert(`结果为${result}`)
+                break;
+            case '/':
+                result = num1 / num2
+                alert(`结果为${result}`)
+                break;
+            default:
+                alert('输入错误，请重新输入')
+        }
+
+    </script>
+</body>
+
+</html>
