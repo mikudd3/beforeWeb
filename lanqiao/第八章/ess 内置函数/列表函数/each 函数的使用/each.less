@@ -1,0 +1,15 @@
+@colors: {
+    color: blue;
+    background-color: green;
+  };
+  
+  @set: div p span;
+  
+  each(@set,{
+      .set-@{value}{
+          each(@colors,{
+              @{key}: @value;
+          })
+          
+      }
+  });

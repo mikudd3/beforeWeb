@@ -1,0 +1,14 @@
+.card_body {
+  border: 1px solid #d1d9d9;
+  text-align: center;
+  margin: 50px auto;
+  box-shadow: 3px 3px 20px #d1d9d9;
+  width: 400px;
+}
+.card_body img {
+  width: 90%;
+  margin: 10px;
+}
+.card_body .pic_story p {
+  color: #aaaaaa;
+}

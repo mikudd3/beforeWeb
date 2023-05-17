@@ -1,0 +1,26 @@
+@radius: 45deg;
+@color_deg: green;
+@background: black;
+
+.linear-gradient(@c1, @c2, @c3, @c4, @c5) {
+    
+    //增加颜色亮度
+    background-color: lighten(@c4, @c1);
+    //降低颜色饱和度
+    background-color: desaturate(@4, @2);
+
+    //降低颜色的亮度
+    background-color: darken(@4, @3);
+
+    //颜色色相改变 60 度
+    background-color: greyscale(@4);
+
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: @background ;
+    .linear-gradient(45deg, 20%, 20%, 20%, green, 60deg);
+}

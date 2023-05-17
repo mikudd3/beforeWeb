@@ -1,0 +1,6 @@
+@width: 300px;
+@height: 400px;
+
+div {
+  width: if(boolean(@width < @height), @height, @width);
+}

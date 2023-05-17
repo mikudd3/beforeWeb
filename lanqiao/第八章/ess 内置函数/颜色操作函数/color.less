@@ -1,0 +1,43 @@
+.div {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+@bgColor: #94d0cc;
+
+// 增加颜色饱和度
+.div1 {
+    background-color: saturate(@bgColor, 50%);
+    .div();
+}
+
+// 降低颜色饱和度
+.div2 {
+    background-color: desaturate(@bgColor, 20%);
+    .div();
+}
+
+// 增加颜色亮度
+.div3 {
+    background-color: lighten(@bgColor, 20%);
+    .div();
+}
+
+// 减少颜色亮度
+.div4 {
+    background-color: darken(@bgColor, 20%);
+    .div();
+}
+
+// 设置颜色透明
+.div5 {
+    background-color: fade(@bgColor, 80%);
+    .div();
+}
+
+// 完全移出颜色饱和度
+.div6 {
+    background-color: greyscale(@bgColor);
+    .div();
+}

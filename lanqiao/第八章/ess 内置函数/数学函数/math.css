@@ -1,0 +1,6 @@
+div {
+  columns: 2;
+  column-count: 4;
+  max-height: 200;
+  width: 50%;
+}

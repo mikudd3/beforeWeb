@@ -1,0 +1,6 @@
+@font-size: 20px;
+@color: 0;
+div {
+  font-size: if(isnumber(@font-size), @font-size, 14px);
+  color: if(iscolor(@color), @color, #ccc);
+}

@@ -1,0 +1,31 @@
+@rotate: 180deg;
+@width: 100px;
+@height: 100px;
+
+.rotate(@rotate) {
+    transform: rotate(@rotate);
+}
+
+.size(@width, @height) {
+    width: @width;
+    height: @height;
+    margin: 40px auto;
+}
+
+#div1 {
+    background-color: cadetblue;
+    .size(100px, 100px);
+    .rotate(45deg); // 旋转 45 度
+}
+
+#div2 {
+    background-color: rgb(174, 218, 53);
+    .size(50px, 50px);
+    .rotate(190deg); // 旋转 90 度
+}
+
+#div3 {
+    background-color: #ffc288;
+    .size(40px, 40px);
+    .rotate(@rotate); // 使用默认参数
+}

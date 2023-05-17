@@ -1,0 +1,25 @@
+@color: #8ed6e1; // 蓝色
+
+body {
+    text-align: center;
+}
+
+h3 {
+    color: @color; // #8ed6e1
+}
+
+div {
+    @color: #8fd9a8; // 绿色
+
+    #text1 {
+        color: @color; // #8fd9a8
+    }
+}
+
+div {
+    #text2 {
+        color: @color // #ffcc29;;
+    }
+
+    @color: #ffcc29; // 黄色
+}

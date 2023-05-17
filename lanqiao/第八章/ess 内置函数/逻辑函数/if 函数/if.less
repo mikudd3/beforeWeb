@@ -1,0 +1,7 @@
+@width: 100px;
+@height: 50px;
+
+div {
+  width: if((@height> @width), @height, 80px);
+  height: if((@height< @width), @width, 100px);
+}

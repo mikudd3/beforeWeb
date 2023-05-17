@@ -1,0 +1,26 @@
+@width: 100px;
+@height: 100px;
+@bgcolor: #77acf1;
+.div {
+  float: left;
+  border: 1px solid;
+  margin-left: 10px;
+}
+#div1 {
+  width: @width + 10px;
+  height: @height + 10px;
+  background-color: @bgcolor;
+  .div();
+}
+#div2 {
+  width: @width - 10px;
+  height: @height - 10px;
+  background-color: @bgcolor*2;
+  .div();
+}
+#div3 {
+  width: @width * 0.5;
+  height: @height * 0.5;
+  background-color: @bgcolor+#204;
+  .div();
+}

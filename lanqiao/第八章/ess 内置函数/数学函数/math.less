@@ -1,0 +1,12 @@
+@num1: 1.4;
+@num2: 4.4;
+@height1: 100;
+@height2: 200;
+@width: 0.5;
+
+div {
+  columns: ceil(@num1);
+  column-count: floor(@num2);
+  max-height: max(@height1, @height2);
+  width: percentage(@width);
+}
