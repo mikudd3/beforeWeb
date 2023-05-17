@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Role(name) {
+            this.name = name;
+            this.grade = 1;
+            this.hp = 100;
+            this.attack = function () {
+                console.log(`我在攻击`);
+            }
+        }
+
+        function Mage(name) {
+            Role.call(this, name);
+            this.magicAttack = function () {
+                console.log(`我的昵称是：${name}，我在魔法攻击`);
+            }
+        }
+
+        Mage.prototype = Role;
+        let mage = new Mage('蓝魔法师')
+
+        mage.attack()
+        mage.magicAttack()
+
+
+    </script>
+</body>
+
+</html>

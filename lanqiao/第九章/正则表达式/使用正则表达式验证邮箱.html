@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script>
+        function isEmail(email) {
+            //验证规则：5-10个字符@1个或多个以上字符，以com、net、org结尾
+            var regExp = /^\w{5,10}@\w+\.(com|net|org)$/;
+
+            var flag = regExp.test(email);
+
+            return flag;
+        }
+
+        window.onload = function () {
+            var userForm = document.getElementById("userForm");
+            var usernameText = document.getElementById("username");
+            var emailText = document.getElementById("email");
+            var msg = document.getElementById("msg");
+            btn1.onclick = function () {
+                var username = usernameText.value;
+                var email = emailText.value;
+
+                if (!isEmail(email)) {
+                    msg.innerHTML = '<b style="color:red;">邮箱格式不正确</b>';
+                } else {
+                    // 提交表单
+                    userForm.submit();
+                }
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <div id="msg"></div>
+    <form id="userForm" action="handle.html" method="get">
+        用户名: <input type="text" id="username" /> <br />
+        邮箱：<input type="text" id="email" /><br />
+        <input id="btn1" type="button" value="提交" />
+    </form>
+</body>
+
+</html>

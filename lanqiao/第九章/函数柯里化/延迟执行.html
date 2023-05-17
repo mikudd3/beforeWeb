@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function add() {
+            // 1.因为参数不确定 所以不设定形参 使用arguments 保存参数
+            console.log(arguments); //
+            // arguments 是对象，不是数组，没有push方法，先把arguments转换成Array
+            let args = Array.prototype.slice.call(arguments);
+
+            // 2.定义内部函数
+            // 用来接受第二次传入的参数的
+            let inner = function () {
+                args.push(...arguments);
+
+                return inner; // 3.返回时调用了函数的toString方法 把函数转换成字符串的形式 打印的其实是定义该函数的代码
+            };
+
+            // 4.因为inner函数已经返回函数 没办法再返回数值了 可以通过修改它的toString方法返回数值
+            inner.toString = function () {
+                // 参数相加
+                let sum = args.reduce(function (prev, curr) {
+                    return prev + curr;
+                });
+                return sum;
+            };
+
+            return inner;
+        }
+
+        const result = add(1)(2)(3)(4);
+        console.log(result); // 10
+        console.log(typeof result); // function
+    </script>
+</head>
+
+<body></body>
+
+</html>

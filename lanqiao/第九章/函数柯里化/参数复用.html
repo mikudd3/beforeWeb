@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script>
+        // 正常正则验证字符串 reg.test(txt)
+        // 函数封装后
+        function check(reg, txt) {
+            return reg.test(txt);
+        }
+
+        console.log(check(/\d+/g, "aaa")); // false
+        console.log(check(/\d+/g, "111")); // true
+        console.log(check(/[a-z]+/g, "test")); // true
+        console.log(check(/[a-z]+/g, "lanqiao")); // true
+
+
+        // Currying后
+        function curryingCheck(reg) {
+            return function (txt) {
+                return reg.test(txt);
+            };
+        }
+
+        var hasNumber = curryingCheck(/\d+/g);
+        var hasLetter = curryingCheck(/[a-z]+/g);
+
+        console.log(hasNumber("aaa")); // false
+        console.log(hasNumber("111")); // true
+        console.log(hasLetter("test")); // 
+    </script>
+</head>
+
+<body></body>
+
+</html>

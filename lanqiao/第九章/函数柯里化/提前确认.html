@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        // 只调用一次
+        var bind = (function () {
+            if (document.addEventListener) {
+                return function (element, event, handler) {
+                    if (element && event && handler) {
+                        element.addEventListener(event, handler, false);
+                    }
+                };
+            } else {
+                return function (element, event, handler) {
+                    if (element && event && handler) {
+                        element.attachEvent("on" + event, handler);
+                    }
+                };
+            }
+        })();
+
+        window.onload = function () {
+            var btn1 = document.getElementById("btn1");
+            bind(btn1, "click", function () {
+                alert("我被点击了");
+            });
+        };
+    </script>
+</head>
+
+<body>
+    <button id="btn1">点我</button>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.eat = function () {
+                console.log("吃饭");
+            };
+        }
+
+        function Student(sno) {
+            this.sno = sno;
+            this.study = function () {
+                console.log(
+                    "学号:" + this.sno + ",姓名:" + this.name + ",我在学习继承"
+                );
+            };
+        }
+
+        // 使用 prototype 继承总共需要两步
+        //1. 创建父类的对象
+        var person = new Person("张三", 22);
+        //2. 子类.prototype = 父类对象
+        Student.prototype = person;
+
+        var stu = new Student(1);
+        // stu.eat();
+        // stu.study();
+
+        // 大学生
+        function UniversityStudent() {
+            this.practice = function () {
+                console.log("我在实习");
+            };
+        }
+
+        UniversityStudent.prototype = stu; // 继承学生
+
+        var universityStudent = new UniversityStudent();
+        universityStudent.eat();
+        universityStudent.study();
+        universityStudent.practice();
+
+        console.log(universityStudent);
+        console.log(universityStudent.__proto__); // stu对象
+        console.log(universityStudent.__proto__.__proto__); // person对象
+
+        console.log(person.__proto__.__proto__ === Object.prototype); // true
+        console.log(Object.prototype.__proto__); // null
+    </script>
+</head>
+
+<body></body>
+
+</html>

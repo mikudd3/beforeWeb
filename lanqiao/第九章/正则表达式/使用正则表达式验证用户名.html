@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            let userForm = document.getElementById("userForm");
+            let usernameText = document.getElementById("username");
+            let msg = document.getElementById("msg");
+            btn1.onclick = function () {
+                let regExp = /^[a-zA-Z]{6,10}$/;
+                if (!regExp.test(username.value)) {
+                    msg.innerHTML = '<b style="color:red;">用户名格式不正确</b>';
+                } else {
+                    // 提交表单
+                    userForm.submit();
+                }
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <div id="msg"></div>
+    <form id="userForm" action="handle.html" method="get">
+        用户名: <input type="text" id="username" />
+        <input id="btn1" type="button" value="提交" />
+    </form>
+</body>
+
+</html>

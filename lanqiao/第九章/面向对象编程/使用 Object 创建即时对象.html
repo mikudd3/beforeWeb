@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        let stu = new Object(); // 创建对象
+        stu.sno = 1; // 设置属性
+        stu.name = "李四";
+        stu.age = 22;
+
+        stu.study = function () {
+            alert("我是" + this.name + ",我在学js");
+        };
+
+        stu.study(); // 调用 study 方法
+        delete stu.name; // 删除对象的 name 属性
+        stu.study();
+
+        let stu2 = new Object();
+        stu2.sno = 2;
+        stu2.name = "张三";
+        stu2.age = 21;
+
+        stu2.study = function () {
+            alert("我是" + this.name + ",我在学js");
+        };
+
+        stu2.study();
+    </script>
+</head>
+
+<body></body>
+
+</html>

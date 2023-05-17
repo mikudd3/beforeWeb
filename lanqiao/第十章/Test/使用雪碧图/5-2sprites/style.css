@@ -1,0 +1,19 @@
+.sprite {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+.bg1 {
+    background: url(./icon.png) 0 0 no-repeat;
+}
+
+.bg2 {
+    background: url(./icon.png) -20px 0 no-repeat;
+}
+
+.bg3 {
+    background: url(./icon.png) -40px 0 no-repeat;
+}

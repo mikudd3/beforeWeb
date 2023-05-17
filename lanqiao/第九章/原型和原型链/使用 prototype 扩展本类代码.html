@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Student(sno, name, age) {
+            this.sno = sno;
+            this.name = name;
+            this.gae = age;
+            // this.grade = 1;
+            this.study = function () {
+                alert(`我是${this.name},我正在学习`);
+            };
+        }
+
+        Student.prototype.grade = 2; // prototype继承
+
+        let stu = new Student(1, 'aaa', 22);
+
+        console.log(stu);
+
+        console.log(`姓名：${stu.name},年级：${stu.grade}`);
+    </script>
+</body>
+
+</html>
