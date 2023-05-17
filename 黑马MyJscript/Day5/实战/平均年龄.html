@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        7. 使用for循环 - 求出数组里大于5的和,  以及能被3整除的偶数的个数
+         let arrCount = [4, 9, 5, 3, 20, 6, 15, 11, 35]
+        */
+
+        let arrCount = [4, 9, 5, 3, 20, 6, 15, 11, 35]
+
+        let sum = 0
+
+        for (let i = 0; i < arrCount.length; i++) {
+            sum += arrCount[i]
+        }
+
+        document.write(`平均年龄为：${sum / arrCount.length}`)
+    </script>
+</body>
+
+</html>

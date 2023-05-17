@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        11. 计算m-n之间所有数的和
+          封装函数，实现功能：
+          调用函数，传入用户输入的两个数字，分别表示最小值和最大值
+          函数返回最小值到最大值之间的所有数字的和
+        */
+
+        let m = +prompt(`输入最小数字`)
+        let n = +prompt(`输入最大数字`)
+
+        function fn(min, max) {
+            let sum = 0
+            for (let i = min; i <= max; i++) {
+                sum += i
+            }
+            return sum
+        }
+
+        let res = fn(m, n)
+        alert(`${m}到${n} 之间所有数的和是 ${res}`)
+
+    </script>
+</body>
+
+</html>

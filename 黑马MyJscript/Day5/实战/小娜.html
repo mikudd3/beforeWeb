@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        13. 小娜
+        需求: 只要用户输入的不是相关选项, 则一直存在弹出输入提示框, 等待用户的输入
+        思路:
+          - while() 循环
+          - 弹出输入框
+        */
+
+        let num
+
+        while (num !== 'q') {
+            num = prompt(`
+       			你好我是小娜，请选择功能：
+       			输入q: 退出
+       			输入1: 求和
+       			输入2: 求乘积
+            `)
+
+            if (num == 'q') {
+                alert('我退出咯, 你不爱我了!')
+
+            }
+
+            if (num == 1) {
+                let num1 = +prompt('请输入第一个数字')
+                let num2 = +prompt('请输入第二个数字')
+                alert(num1 + num2)
+            }
+
+            if (num == 2) {
+                let num1 = +prompt('请输入第一个数字')
+                let num2 = +prompt('请输入第二个数字')
+                alert(num1 * num2)
+            }
+        }
+
+    </script>
+</body>
+
+</html>

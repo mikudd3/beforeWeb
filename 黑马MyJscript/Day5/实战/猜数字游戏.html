@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        12. 猜数字游戏，设定次数，最多猜5次
+        要求
+        1. 生成随机的数字0到20
+        2. 只能猜5次，5次机会用完提示 `这都猜不到`
+        3. 猜对了，就提示 恭喜猜对拉
+        4. 猜小了，您猜的数字小了
+        5. 猜大了，就提示用户 您猜的数字大了
+        */
+
+
+        function random(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+
+        // 生成一个数字先,猜0-20之间的数
+        let num = random(0, 20)
+
+        let flag
+
+        // 最多猜5次
+        for (let i = 1; i <= 5; i++) {
+            let userNum = +prompt('请输入您要猜的数字')
+
+            // 比较数字
+            if (userNum > num) {
+                alert('您猜的数字大了')
+            } else if (userNum < num) {
+                alert('您猜的数字小了')
+            } else if (userNum === num) {
+                flag = true
+                alert('恭喜您猜对了！')
+                break
+            }
+        }
+
+        if (flag === undefined) {
+            alert('这都猜不到！O(∩_∩)O')
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        3. 用户输入一个数，  计算 1 到这个数的和。
+         比如 用户输入的是 5， 则计算 1~5 之间的累加和 并且输出到控制台
+        */
+
+        let num = +prompt('请输入一个数：')
+        let sum = 0
+        for (let i = 1; i <= num; i++) {
+            sum += i
+        }
+
+        document.write('和为:' + sum)
+
+    </script>
+</body>
+
+</html>

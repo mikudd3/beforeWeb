@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getRandomColor(flag = true) {
+            if (flag) {
+                let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+                let str = '#'
+                for (let i = 0; i < 6; i++) {
+                    let index = Math.floor(Math.random() * arr.length)
+                    str += arr[index]
+                }
+
+                return str
+            } else {
+                let r = Math.floor(Math.random() * 256)
+                let g = Math.floor(Math.random() * 256)
+                let b = Math.floor(Math.random() * 256)
+
+                return `rgb(${r},${g},${b})`
+            }
+        }
+        console.log(getRandomColor(true));
+        console.log(getRandomColor(false));
+
+    </script>
+</body>
+
+</html>

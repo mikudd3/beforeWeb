@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        7. 使用for循环 - 求出数组里大于5的和,  以及能被3整除的偶数的个数
+         let arrCount = [4, 9, 5, 3, 20, 6, 15, 11, 35]
+        */
+
+
+        let arrCount = [4, 9, 5, 3, 20, 6, 15, 11, 35]
+        let sum = 0 // 存累加和
+        let temp = [] // 存能被3整除的偶数结果
+        for (let i = 0; i < arrCount.length; i++) {
+            if (arrCount[i] > 5) {
+                sum += arrCount[i]
+            }
+
+            if (arr[i] % 3 === 0) {
+                temp.push(arrCount[i])
+            }
+        }
+        console.log(`数组里面大于5的和是 ${sum}`)
+        console.log(`数组里面能够被3整除的偶数的个数是 ${temp.length}`)
+    </script>
+</body>
+
+</html>

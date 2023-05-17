@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        4. 用户输入分数，根据分数奖励不同的车( 利用多分支语句 )
+         - 90~100分     奖励法拉利
+         - 80~90分      奖励奥迪
+         - 60~80分      奖励奥拓
+         - 60分以下      打一顿
+        */
+
+        let score = +prompt('请输入分数：')
+
+        if (score >= 90) {
+            document.write('奖励法拉利')
+        } else if (score >= 80) {
+            document.write('奖励奥迪')
+        } else if (score >= 60) {
+            document.write('奖励奥拓')
+        } else {
+            document.write('打一顿')
+        }
+    </script>
+</body>
+
+</html>

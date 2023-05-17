@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function random(min, max) {
+
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+
+
+        // 生成一个数字先,猜0-20之间的数
+        let num = random(0, 20)
+
+        let flag = true
+        // 最多猜8次
+        for (let i = 1; i <= 8; i++) {
+
+            let userNum = prompt('请输入您要猜的数字')
+
+            // 比较数字
+            if (userNum > num) {
+
+                alert('您猜的数字大了')
+            } else if (userNum < num) {
+
+                alert('您猜的数字小了')
+            } else {
+                flag = false
+                alert('恭喜猜对了！')
+                break
+            }
+        }
+
+        if (flag) {
+            alert('太笨了，这都猜不到！O(∩_∩)O')
+        }
+    </script>
+</body>
+
+</html>
