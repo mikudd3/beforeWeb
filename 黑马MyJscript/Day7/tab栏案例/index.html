@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8" />
+  <title></title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .wrapper {
+      width: 1000px;
+      height: 475px;
+      margin: 0 auto;
+      margin-top: 100px;
+    }
+
+    .tab {
+      border: 1px solid #ddd;
+      border-bottom: 0;
+      height: 36px;
+      width: 320px;
+    }
+
+    .tab li {
+      position: relative;
+      float: left;
+      width: 80px;
+      height: 34px;
+      line-height: 34px;
+      text-align: center;
+      cursor: pointer;
+      border-top: 4px solid #fff;
+    }
+
+    .tab span {
+      position: absolute;
+      right: 0;
+      top: 10px;
+      background: #ddd;
+      width: 1px;
+      height: 14px;
+      overflow: hidden;
+    }
+
+    .products {
+      width: 1002px;
+      border: 1px solid #ddd;
+      height: 476px;
+    }
+
+    .products .main {
+      float: left;
+      display: none;
+    }
+
+    .products .main.active {
+      display: block;
+    }
+
+    .tab li.active {
+      border-color: red;
+      border-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <ul class="tab">
+      <li class="tab-item active">国际大牌<span>◆</span></li>
+      <li class="tab-item">国妆名牌<span>◆</span></li>
+      <li class="tab-item">清洁用品<span>◆</span></li>
+      <li class="tab-item">男士精品</li>
+    </ul>
+    <div class="products">
+      <div class="main active">
+        <a href="###"><img src="imgs/guojidapai.jpg" alt="" /></a>
+      </div>
+      <div class="main">
+        <a href="###"><img src="imgs/guozhuangmingpin.jpg" alt="" /></a>
+      </div>
+      <div class="main">
+        <a href="###"><img src="imgs/qingjieyongpin.jpg" alt="" /></a>
+      </div>
+      <div class="main">
+        <a href="###"><img src="imgs/nanshijingpin.jpg" alt="" /></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 1. a 模块制作 要给 5个链接绑定鼠标经过事件
+    // 1.1 获取 a 元素 
+    const as = document.querySelectorAll('.tab li')
+    console.log(as) 
+    for (let i = 0; i < as.length; i++) {
+      // console.log(as[i])
+      // 要给 5个链接绑定鼠标经过事件
+      as[i].addEventListener('mouseenter', function () {
+        // console.log('鼠标经过')
+        // 排他思想  
+        // 干掉别人 移除类active
+        document.querySelector('.tab .active').classList.remove('active')
+        // 我登基 我添加类 active  this 当前的那个 a 
+        this.classList.add('active')
+
+        // 下面5个大盒子 一一对应  .item 
+        // 干掉别人
+        document.querySelector('.products .active').classList.remove('active')
+        // 对应序号的那个 item 显示 添加 active 类
+        document.querySelector(`.products .main:nth-child(${i + 1})`).classList.add('active')
+
+      })
+    }
+  </script>
+
+</body>
+
+</html>
