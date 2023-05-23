@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    水果清单：
+    <ul>
+        <li>苹果</li>
+        <li>梨子</li>
+        <li>葡萄</li>
+        <li>西瓜</li>
+        <li>樱桃</li>
+        <li>草莓</li>
+        <li>桑葚</li>
+    </ul>
+    <script>
+        $(function(){
+            // :first	选取指定元素的第一个该元素
+            $('li:first').css('color','#a7c5eb')
+            // :last	选取指定元素的最后一个该元素。
+            $('li:last').css('color','#ffc478')
+            // :odd	选取指定元素序号为奇数的所有该元素。
+            $('li:odd').css('color','#c1a1d3')
+            // :even	选取指定元素序号为偶数的所有该元素。
+            $('li:even').css('font-size','25px')
+            // :eq(n)	选取指定元素的第 n 个该元素。
+            $('li:eq(4)').css('text-shadow','2px 2px 2px #96bb7c')
+            // :lt(n)	选择指定元素中小于 n 的所有该元素。
+            // $('li:lt(4)').css('text-shadow','2px 2px 2px #96bb7c')
+            // :gt(n)	选取指定元素中大于 n 的所有该元素。
+            // $('li:gt(4)').css('text-shadow','2px 2px 2px #96bb7c')
+
+        })
+    </script>
+</body>
+
+</html>

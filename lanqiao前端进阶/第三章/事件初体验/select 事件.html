@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        textarea {
+            color: darkgray;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("input").select(function () {
+                $(this).css("background-color", "#a1c2e2")
+            })
+            $("textarea").select(function () {
+                $(this).css("color", "#a1c2e2")
+            })
+        })
+    </script>
+</head>
+
+<body>
+    姓名：<input type="text" value="请输入你的姓名" /><br />
+    年龄：<input type="text" value="请输入你的年龄" /><br /><br />
+    <textarea cols="23" rows="6">自我介绍...</textarea>
+</body>
+
+</html>

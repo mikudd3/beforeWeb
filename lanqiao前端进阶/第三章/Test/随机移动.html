@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>随机移动</title>
+    <style>
+        body {
+            background-color: #31326f;
+        }
+
+        /*请把代码补充完整*/
+        #move {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            position: relative;
+            padding: 0px;
+        }
+
+        #box {
+            display: block;
+            margin: 80px auto;
+            border: 1px solid #fff;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        $(function () {
+            // 请把 ？ 处的缺少代码补充完整
+            $('#move').on('mouseover', function () {
+                let Width = $(document).width() - 100; // 文档宽度
+                let Height = $(document).height() - 100;// 文档高度
+                // 生成随机位置
+                var X = Math.floor(Math.random() * Width);
+                var Y = Math.floor(Math.random() * Height);
+                // 使用动画，让元素向左移动 X 个像素，元素向上移动 Y 个像素
+                $(this).stop(true).animate({ left: X + 'px', top: Y + 'px' });
+                // 判断是否重叠
+                checkOverlap();
+            })
+            function checkOverlap() {
+                var box = $('#box')[0].getBoundingClientRect();
+                var move = $('#move')[0].getBoundingClientRect();
+
+                if (!(move.right < box.left ||
+                    move.left > box.right ||
+                    move.bottom < box.top ||
+                    move.top > box.bottom)) {
+                    alert('重叠了！');
+                }
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <!--请把代码补充完整-->
+    <div id="move"></div>
+    <div id="box"></div>
+</body>
+
+</html>

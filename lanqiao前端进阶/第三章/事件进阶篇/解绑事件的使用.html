@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: #2e7aeb;
+            margin-left: 50%;
+        }
+
+        input {
+            margin-left: 50.5%;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        $(function () {
+            // 需求: 点击 div 显示 “欢迎来到蓝桥云课“
+            // 单击解绑按钮后给 div 解除 click 的事件绑定
+            $("div").on("click", function () {
+                alert("欢迎来到蓝桥云课！");
+            });
+            $("input").click(function () {
+                $("div").off("click");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div></div>
+    <input type="button" value="解绑" />
+</body>
+
+</html>

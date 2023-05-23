@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        div {
+            width: 250px;
+            height: 170px;
+            border: 2px solid #000;
+            overflow: scroll;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('div').scroll(function () {
+                $('strong').css('color', 'blue')
+                $('div').css({
+                    'border-color': 'blue',
+                    'box-shadow': '3px 3px 10px #D1D9D9'
+                })
+            })
+
+            // 给文档对象绑定滚动事件
+            $(document).scroll(function () {
+                let r = Math.random() * 255
+                let g = Math.random() * 255
+                let b = Math.random() * 255
+                $("pre").css("color", `rgb(${r},${g},${b})`)
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <strong>大熊猫（学名：Ailuropoda melanoleuca）</strong>，也称作大猫熊，一般称为“熊猫”或“猫熊”，属于食肉目熊科的一种哺乳动物，体色为黑白两色。
+        熊猫是中国特有物种，现存的主要栖息地是中国中西部四川盆地周边的山区和陕西南部的秦岭地区。
+        全世界野生大熊猫现存大约有2060头。2016年末，<strong>世界自然保护联盟（IUCN）</strong>将大熊猫的受威胁等级从“濒危级”降为“易危级”。
+    </div>
+
+    <pre>
+       我
+       是
+       一
+       个
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       的
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       的
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       很
+       长
+       的
+       瀑
+       布
+     </pre>
+</body>
+
+</html>

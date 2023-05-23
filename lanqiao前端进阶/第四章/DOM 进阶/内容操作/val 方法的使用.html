@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>val 方法的使用</title>
+    <style>
+        div {
+            width: 300px;
+            height: 150px;
+            margin: 10px 0 10px 0;
+            text-align: center;
+            border: 1px solid rgb(27, 179, 128);
+        }
+    </style>
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#get").click(function () {
+                alert($("#name").val());
+            });
+            $("#set").click(function () {
+                $("#phone").val("1234567");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="请输入你的名字" id="name" />
+        <input type="phone" id="phone" />
+    </div>
+    <input type="button" value="获取名字" id="get" />
+    <input type="button" value="设置电话" id="set" />
+</body>
+
+</html>

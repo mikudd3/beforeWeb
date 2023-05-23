@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clone 的使用</title>
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            margin: 20px 0 10px 0;
+            background-color: #cee6b4;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("div").click(function () {
+                alert("hi");
+            });
+            $("input").one("click", function () {
+                // 克隆元素
+                // 当后面参数为true时，表示该元素的事件也一起克隆
+                //当后面的参数为false时，只复制元素，该元素的事件不复制
+                // var $div = $("div").clone(true);
+                var $div = $("div").clone(false);
+                // 将克隆的元素添加到body后面
+                $("body").append($div);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div></div>
+    <input type="button" value="复制" />
+</body>
+
+</html>

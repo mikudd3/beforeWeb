@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>text 方法的使用</title>
+    <style>
+        div {
+            width: 300px;
+            height: 150px;
+            margin: 10px 0 10px 0;
+            text-align: center;
+            border: 1px solid rgb(27, 179, 128);
+        }
+    </style>
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#poem1").click(function () {
+                alert($(this).text());
+            });
+            $("input").click(function () {
+                $("h3").text("山中问答");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="poem1">
+        <h3></h3>
+        <p>问余何意栖碧山，笑而不答心自闲。</p>
+        <p>桃花流水窅然去，别有天地非人间。</p>
+    </div>
+    <input type="button" value="添加标题" />
+</body>
+
+</html>

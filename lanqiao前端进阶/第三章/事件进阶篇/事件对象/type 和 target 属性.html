@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                alert("这是一个 " + event.type + " 事件");
+                $(event.target).css("background-color", "#99f3db"); // event.target 相当于 this
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <input id="btn" type="button" value="点击" />
+</body>
+
+</html>

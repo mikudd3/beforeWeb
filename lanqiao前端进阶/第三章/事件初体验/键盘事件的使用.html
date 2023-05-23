@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        div {
+            color: coral;
+        }
+    </style>
+    <script>
+        $(function () {
+            // 键盘松开
+            $('#num').keyup(function () {
+                let limit = /^1[0-9]{10}$/; // 正则表达式，只能输入 11 位 0-9 之间的整数
+                let value = $(this).val(); // 获取当前值
+                if (limit.test(value)) {
+                    // test 方法用来检查当前输入是否符合 limit 中正则表达式的要求
+                    $("#div1").text("输入的手机号码符合要求!");
+                } else {
+                    $("#div1").text("手机号码格式不正确");
+                }
+            })
+
+            // 键盘按下
+            $('#num').keydown(function () {
+                // 注意如果这里获取内容是获取的上一次文本框的内容 因为键盘并没有弹起 本次输入的内容还没有加入到文本框中
+                console.log("正在输入"); // 同学们可以加入 + $(this).val() 进行测试
+            })
+        })
+    </script>
+</head>
+
+<body>
+    电话号码：<input id="num" type="text" />
+    <div id="div1"></div>
+</body>
+
+</html>

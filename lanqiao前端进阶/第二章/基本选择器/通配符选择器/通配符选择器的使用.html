@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通配符选择器</title>
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            margin: 200px;
+            height: 150px;
+            border: 1px solid;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        // 方式1
+        // $(function () {
+        //     $("h3,span").css({
+        //         color: "blue",
+        //     })
+        // })
+
+        // 方式2
+        $(function () {
+            $("*").css({
+                'list-style': 'none',
+                color: '#b6c967'
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+    <div id="list1">
+        <ul>
+            水果：
+            <li>苹果</li>
+            <li>李子</li>
+            <li>西瓜</li>
+        </ul>
+    </div>
+    <div id="list2">
+        <ul>
+            蔬菜：
+            <li>西红柿</li>
+            <li>大白菜</li>
+            <li>小米辣</li>
+        </ul>
+    </div>
+</body>
+
+</html>

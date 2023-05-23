@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>after() 与 insertAfter()</title>
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            border: 1px solid #000;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        $(function () {
+            var i = 0;
+            var j = 0;
+            // after 的使用
+            $("#div1").click(function () {
+                i++;
+                var $div = $(`<div>我喜欢 jQuery${i}</div>`);
+                $("#div1").after($div);
+            });
+            // insertAfter 的使用
+            $("#div2").click(function () {
+                j++;
+                var $div = $(`<div>I like jQuery${j}</div>`);
+                $($div).insertAfter("#div2");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="div1">after</div>
+    <div id="div2">insertAfter</div>
+</body>
+
+</html>

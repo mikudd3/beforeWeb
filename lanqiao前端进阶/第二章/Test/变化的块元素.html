@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变化的块元素</title>
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #a6d6d6;
+            text-align: center;
+            float: left;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        // 鼠标移入
+        $(function () {
+            $(".div1").hover(
+                function () {
+                    $(".div1").css("background-color", "black")
+                },
+                function () {
+                    // 鼠标移出
+                    $(".div1").css("background-color", "#a6d6d6")
+                }
+            )
+
+            $(".div2").hover(
+                function () {
+                    $(".div2").css("border-radius", "50%")
+                },
+                function () {
+                    // 鼠标移出
+                    $(".div2").css("border-radius", "0%")
+                }
+            )
+
+            $(".div3").hover(
+                function () {
+                    $(".div3").css("width", "200px")
+                },
+                function () {
+                    // 鼠标移出
+                    $(".div3").css("width", "100px")
+                }
+            )
+        })
+
+
+
+    </script>
+</head>
+
+<body>
+    <div class="div1">变色</div>
+    <div class="div2">变形</div>
+    <div class="div3">变长</div>
+</body>
+
+</html>

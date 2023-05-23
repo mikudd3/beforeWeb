@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+            width: 240px;
+            height: 140px;
+            border: 2px solid rgb(19, 37, 206);
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <!--姓名输入框不能更改-->
+        姓名：<input type="text" value="小明" disabled="disabled" /><br /><br />
+        电话：<input type="phone" /><br /><br />
+        您的爱好是: 足球:<input type="checkbox" name="hobby" checked="checked" value="football" />
+        篮球:<input type="checkbox" name="hobby" value="basketball" />
+        羽毛球:<input type="checkbox" name="hobby" checked="checked" value="badminton" />
+    </form>
+    <script>
+        $(function () {
+            $("input:checked").before("❤");
+        });
+        $(function () {
+            $("input:enabled").css("color", "#9fd8df"); // 给可用表单的输入框加上字体颜色
+            $("input:disabled").css("border", "1px solid #81b214"); // 给不可更改的表单输入框设置边框样式
+        });
+    </script>
+
+</body>
+
+</html>

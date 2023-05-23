@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        .container ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container li {
+            float: left;
+        }
+
+        .container li a {
+            display: block;
+            margin: 10px;
+            text-decoration: none;
+            color: rgb(119, 171, 240);
+        }
+
+        .container .active {
+            background-color: rgba(119, 171, 240, 0.42);
+        }
+    </style>
+    <script>
+        // 鼠标事件
+        $(function () {
+            $('.container li').on('click', function () {
+                // siblings() 是 jQuery 中的一个方法，它用于选择某个元素的所有兄弟元素。
+                // siblings() 方法被用来选择当前选定元素的所有兄弟元素，
+                // 然后使用 removeClass() 方法将 active 类从它们身上移除。
+                $(this).addClass('active').siblings().removeClass('active')
+            })
+        })
+
+        // // 鼠标事件
+        // $(document).ready(function () {
+        //     $('.container li').on('click', function () {
+        //         $(this).addClass('active').siblings().removeClass('active');
+        //     });
+        // });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li class="active"><a href="#">首页</a></li>
+            <li><a href="#">科幻</a></li>
+            <li><a href="#">文学</a></li>
+            <li><a href="#">历史</a></li>
+            <li><a href="#">关于我们</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

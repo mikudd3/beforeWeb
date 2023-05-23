@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(100, 198, 237);
+        }
+
+        input {
+            width: 100px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("div").click(function () {
+                alert("背景颜色为：" + $("div").css("background-color")); // 获取背景颜色的属性值
+            });
+            $("input").click(function () {
+                $("div").css("border", "4px solid #94ebcd"); // 给 div 元素添加一个边框
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div></div>
+    <br />
+    <input type="button" value="添加边框" />
+</body>
+
+</html>

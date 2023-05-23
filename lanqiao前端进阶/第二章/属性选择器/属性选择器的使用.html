@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>属性选择器</title>
+</head>
+<body>
+    <div class="content">
+        <div id="item1">蓝桥云课</div>
+        <div id="item2">蓝桥云课</div>
+        <div class="test1">蓝桥云课</div>
+        <div class="test2">蓝桥云课</div>
+    </div>
+    <script>
+        $(function(){
+            // 将带有id属性的div标签中的字体的font-size设置为30px
+            $("div[id]").css("font-size","30px")
+            // 将带有id属性且id名为item2的div标签中的字体的color设置为blue
+            $("div[id = 'item2']").css("color","blue")
+            // 将带有id属性且id名不为item2的div标签中的字体的text-shadow设置为2px 2px 2px #78c4d4
+            $("div[id != 'item2']").css("text-shadow","2px 2px 2px #78c4d4")
+             // body[class ^='c'] 选择了 class 名以 c 开头的元素。
+            $("body[class ^='c']").css("text-align", "center");
+        })
+    </script>
+</body>
+</html>

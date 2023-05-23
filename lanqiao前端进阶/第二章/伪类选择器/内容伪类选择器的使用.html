@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        table,
+        tr,
+        td {
+            border: 3px solid rgb(123, 145, 29);
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>123</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>213</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td></td>
+            <td>321</td>
+        </tr>
+    </table>
+    <script>
+        $(function () {
+            $("td:contains('1')").css('color', '#ade498')
+            $('td:has(td)').css('background-color', '#e1ffc2')
+            // 在指定元素里添加内容
+            $("td:empty").append("10");
+            //$("td:parent").append("❤")
+        })
+    </script>
+</body>
+
+</html>

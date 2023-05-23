@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        head {}
+    </style>
+</head>
+
+<body>
+    <div class="circle">
+        <div class="eye"></div>
+        <div class="eye"></div>
+    </div>
+    <script>
+        $(function () {
+            // 脸
+            $('.circle').css({
+                "width": "200px",
+                "height": "200px",
+                "border-radius": "100%",
+                "background-color": "#f6f6cb"
+            })
+
+            // 眼睛
+            $('.eye').css({
+                'width': '40px',
+                "height": "40px",
+                "border-radius": "100%",
+                "background": "radial-gradient(circle, #a7d0cd, #ffc288, #bdc7c9)",
+                "float": "left",
+                "margin": "80px 30px",
+                "transition": "transform 0.3s ease-out"
+            })
+
+            $('.eye').hover(
+                // 当鼠标移到眼睛上， 眼睛会向左上方瞄
+                function () {
+                    $(this).css({ 'transform': 'translate(-20px,-20px)' });
+                    // siblings用于选定另一个eye元素
+                    $(this).siblings('.eye').css({ 'transform': 'translate(-20px,-20px)' });
+                },
+                // 移开鼠标恢复原状。
+                function () {
+                    $(this).css({ 'transform': 'none' });
+                    // siblings用于选定另一个eye元素
+                    $(this).siblings('.eye').css({ 'transform': 'none' });
+                }
+            )
+
+        })
+
+    </script>
+</body>
+
+</html>

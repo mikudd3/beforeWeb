@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        input {
+            width: 200px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("input").click(function () {
+                //1. 使用 attr 方法来获取 width 的属性值
+                alert("图片的宽为：" + $("img").attr("width"));
+                // 2.使用 attr 方法来修改 src 的属性值
+                $("img").attr("src", "https://labfile.oss.aliyuncs.com/courses/3774/bird2.jpg");
+                // 3. attr 可以传入 json 来同时修改多个属性
+                $("img").attr({ src: "https://labfile.oss.aliyuncs.com/courses/3774/bird2.jpg", width: "400px", height: "300px" });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <img width="200px" height="150px" src="https://labfile.oss.aliyuncs.com/courses/3774/bird1.jpg" /><br />
+    <input type="button" value="切换" />
+</body>
+
+</html>

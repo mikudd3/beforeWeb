@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+/*整个任务盒子的样式*/
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 500px;
+    background-color: #fafafa;
+    padding: 0px;
+    box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.07);
+    margin: 30px 0;
+    border-radius: 3px;
+}
+/*任务添加框*/
+#footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px;
+    align-self: flex-start;
+    box-shadow: 0 -10px 10px 0 rgba(1, 1, 1, 0.05);
+}
+/*添加按钮*/
+.taskAdd {
+    width: 3rem;
+    height: 3rem;
+    background: #3b44fb;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    border-radius: .75rem;
+    border: 0;
+    outline: 0;
+    /*will-change: transform;*/
+}
+/*任务输入框*/
+#taskInput {
+    box-sizing: border-box;
+    font-size: 1rem;
+    background: transparent;
+    width: calc(100% - 3rem - 5px);
+    border: none;
+}
+#taskInput:focus {
+    outline: 0;
+    border-color: white;
+    color: #0d0d0d;
+}
+/*添加到页面上的任务清单样式*/
+#tasks {
+    padding: 1.5rem 2rem;
+}
+/*清单列表样式*/
+#tasks #tasksList {
+    list-style-type: none;
+    padding-left: 0;
+}
+li {
+    box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.07);
+    border-radius: 3px;
+    color: #4e89ae;
+    padding: 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .03rem;
+    background-color: #fff;
+    margin-bottom: 5px;
+    position: relative;
+    border-right: 0px solid lightgray;
+}

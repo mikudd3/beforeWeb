@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        div {
+            text-align: center;
+            border-radius: 100%;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("input").on("click", function () {
+                var div = $(
+                    "<div style='width:50px; height:50px; background-color: #ddffbc'>嗨</div>"
+                ) // 创建带有属性的元素节点
+                $("body").append(div); // 将创建的 div 元素放入 body 中
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input id="btn" type="button" value="创建元素" />
+</body>
+
+</html>

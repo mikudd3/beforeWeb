@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后代选择器</title>
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#father p").css("color", "blue")
+        })
+    </script>
+</head>
+
+<body>
+    <div id="father">
+        <p>Hello</p>
+        <p>lan qiao</p>
+        <div id="child">
+            <p>我是蓝桥云课</p>
+        </div>
+    </div>
+</body>
+
+</html>

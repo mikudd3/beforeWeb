@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(function () {
+            $("body").click(function () {
+                var $div = $(
+                    "<div style='width: 300px; height: 100px; text-align: center; margin-top: 20px; border: 1px solid #cee6b4;'></div>"
+                );
+                // wrapAll 方法也是将所有指定元素用其他元素进行整体包裹。
+                $("p").wrapAll($div);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>谷雨如丝复似尘，煮瓶浮蜡正尝新。</p>
+    <p>牡丹破萼樱桃熟，未许飞花减却春。</p>
+</body>
+
+</html>

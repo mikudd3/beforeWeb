@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <b>苹果</b>
+        <li>梨子</li>
+        <li>葡萄</li>
+        <li>西瓜</li>
+        <li>樱桃</li>
+        <li>草莓</li>
+        <li>桑葚</li>
+    </ul>
+    <ul>
+        <li>苹果</li>
+        <li>梨子</li>
+        <li>葡萄</li>
+        <li>西瓜</li>
+        <li>樱桃</li>
+        <li>草莓</li>
+        <li>桑葚</li>
+    </ul>
+    <script>
+        $(function () {
+            // 为既是父元素的第一个孩子又是li的元素设置字体颜色为蓝色
+            $('li:first-child').css('color', '#a7c5eb')
+            //为既是父元素的最后一个孩子又是li的 元素设置字体颜色为紫色
+            $("li:last-child").css("color", "#949cdf");
+            //为既是父元素的第三个孩子又是 li 元素设置字体颜色为橙色
+            $("li:nth-child(3)").css("color", "#fc8621");
+        })
+
+    </script>
+</body>
+
+</html>

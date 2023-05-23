@@ -1,0 +1,71 @@
+/*整个注册表样式*/
+form {
+    max-width: 400px;
+    padding: 4px 4px 2px;
+    border-radius: 3px;
+    margin: 50px auto 0;
+    box-shadow: 0 0 10px #7e8a97;
+}
+/*表标题*/
+form h3 {
+    margin: 0 0 50px 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: #7e8a97;
+    border-bottom: 1px solid #e5e5e5;
+}
+/*输入框整体样式*/
+p {
+    margin-bottom: 50px;
+    position: relative;
+}
+/*输入框样式*/
+input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    margin: 0;
+}
+input[type="text"],
+input[type="password"] {
+    background: #fff;
+    font-size: 18px;
+    padding: 15px 10px;
+    border-radius: 3px;
+    border: 1px solid #e5e5e5;
+}
+/*当聚焦该输入框时*/
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border: 1px solid #99f3bd;
+}
+/*提交按钮*/
+input[type="submit"] {
+    display: block;
+    background: #99f3bd;
+    border-radius: 2px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 20px;
+    outline: none;
+    padding: 20px 0;
+}
+/*输入项名称*/
+label{
+    position: absolute;
+    left: 8px;
+    top: -11px;
+    font-size: 14px;
+    color: #7e8a97;
+    font-size: 16px;
+    display: inline-block;
+    padding: 4px 10px;
+    font-weight: 400;
+    height: 20px;
+    text-align: center;
+    background-color: #fff; 
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .animal {
+            width: 24%;
+            height: auto;
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('.icon').on('click', function () {
+                // 当我们点击图标后，图标会隐藏。
+                $(this).hide()
+                // 页面上会出现四张图片显示在一行
+                $('img:nth-child(1)').show(1000)
+                $('img:nth-child(2)').show(2000)
+                $('img:nth-child(3)').show(3000)
+                $('img:nth-child(4)').show(4000)
+            })
+            // 当把鼠标放在图片上，图片会隐藏，鼠标离开图片，则恢复原状。
+            $('.animal')
+                .mouseover(function () {
+                    // 鼠标移入时，隐藏该元素
+                    $(this).hide(1000)
+                })
+                .mouseout(function () {
+                    // 鼠标移出时，显示该元素
+                    $(this).show(1000)
+                })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <img src="https://labfile.oss.aliyuncs.com/courses/3774/icons8-medium-icons-96.png" alt="icon" class="icon" />
+    </div>
+    <div class="container">
+        <img src="https://labfile.oss.aliyuncs.com/courses/3774/animal_1.jpeg" alt="animal 1" class="animal" hidden />
+        <img src="https://labfile.oss.aliyuncs.com/courses/3774/animal_2.jpeg" alt="animal 2" class="animal" hidden />
+        <img src="https://labfile.oss.aliyuncs.com/courses/3774/animal_3.jpeg" alt="animal 3" class="animal" hidden />
+        <img src="https://labfile.oss.aliyuncs.com/courses/3774/animal_4.jpeg" alt="animal 4" class="animal" hidden />
+    </div>
+</body>
+
+</html>

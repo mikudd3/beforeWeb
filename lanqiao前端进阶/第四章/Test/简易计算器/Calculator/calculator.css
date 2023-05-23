@@ -1,0 +1,53 @@
+/*整个计算器的外观*/
+.calculator {
+    position: absolute;
+    width: 300px;
+    border: 1px auto;
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 30px;
+    display: inline-block;
+    background-color: #A6D6D6;
+    box-shadow: 5px 5px 15px 3px #BBBBBB;
+
+}
+
+.calc-row {
+    text-align: center;
+}
+
+/*结果显示屏*/
+.calc-row div.screen {
+    display: table;
+    width: 85%;
+    color: #000;
+    text-align: right;
+    font-size: 30px;
+    min-height: 30px;
+    margin-left: 10px;
+    padding-right: 0.5em;
+    border: 1px solid #888;
+    background-color: #F0E4D7;
+
+}
+
+.calc-row div {
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    width: 50px;
+    border: 1px solid #555;
+    background-color: #eee;
+    padding: 10px 0;
+    margin: 7px 5px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 1px 1px #222;
+}
+
+.calc-row div.zero {
+    width: 112px;
+}
+
+.calc-row div.zero {
+    margin-right: 5px;
+}

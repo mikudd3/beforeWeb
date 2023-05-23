@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            border: 1px solid #c7ffd8;
+        }
+
+        .circle {
+            background-image: radial-gradient(#ffe6e6, #c6c9ff, #8ad7c1);
+        }
+    </style>
+    <script>
+        $(function () {
+            $("div").click(function () {
+                $(this).removeClass("circle"); // 移除类选择器
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="circle"></div>
+</body>
+
+</html>

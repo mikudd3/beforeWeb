@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgba(128, 128, 128, 0.05);
+        }
+
+        #search {
+            color: gray;
+        }
+    </style>
+    <script>
+        $(function () {
+            // 输入框获得焦点，让输入框的内容为空
+            $('#search').focus(function () {
+                if ($(this).val() === '搜索一下，喜欢的课程') {
+                    $(this).val('')
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <img src="https://labfile.oss.aliyuncs.com/courses/3774/lanqiao.png" /><br />
+    <input id="search" type="text" value="搜索一下，喜欢的课程" />
+    <input type="button" value="搜索" /><br />
+    <img src="https://labfile.oss.aliyuncs.com/courses/3774/courses.png" />
+</body>
+
+</html>

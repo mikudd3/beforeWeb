@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>empty 的使用</title>
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            width: 290px;
+            height: 150px;
+            text-align: center;
+            margin-top: 20px;
+            border: 1px solid #cee6b4;
+        }
+    </style>
+    <script>
+        $(function () {
+            // empty 方法是用来清空指定元素的后代元素和内容的。
+            $("div").click(function () {
+                $(this).empty();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <h3>四时田园杂兴</h3>
+        <p>谷雨如丝复似尘，煮瓶浮蜡正尝新。</p>
+        <p>牡丹破萼樱桃熟，未许飞花减却春。</p>
+    </div>
+</body>
+
+</html>

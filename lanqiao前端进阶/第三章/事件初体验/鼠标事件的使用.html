@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            margin-top: 20px;
+            border-radius: 100%;
+            border: 1px solid;
+        }
+    </style>
+    <script>
+        $(function () {
+            // 鼠标点击事件
+            $("#btn").click(function () {
+                alert("嘻嘻！欢迎到来");
+            });
+
+            // 鼠标移入
+            $("div")
+                .mouseover(function () {
+                    $(this).css("background-color", "blue");
+                    // 鼠标移除
+                })
+                .mouseout(function () {
+                    $(this).css("background-color", "pink");
+                });
+
+            // 鼠标按下事件
+            $("p")
+                .mousedown(function () {
+                    $(this).css("color", "blue"); // this 是指定的当前元素
+                })
+                .mouseup(function () {
+                    $(this).css("color", "pink"); // this 是指定的当前元素
+                });
+        });
+    </script>
+</head>
+
+<body>
+    <div></div>
+    <input type="button" value="点我" id="btn">
+    <p>鼠标按下和抬起时会变色</p>
+</body>
+
+</html>

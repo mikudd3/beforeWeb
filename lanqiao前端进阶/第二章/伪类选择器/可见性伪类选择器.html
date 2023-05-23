@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        /*不可见元素*/
+        .select1 {
+            display: none;
+            /*元素隐藏*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="select1">&#127773;</div>
+    <div class="select2">Hello</div>
+    <input id="btn1" type="button" value="显示" />
+    <input id="btn2" type="button" value="变色" />
+    <script>
+        $(function () {
+            $('#btn1').click(function () {
+                $('div:hidden').css('display', 'block')
+            })
+            $('#btn2').click(function () {
+                $('div:visible').css('color', 'blue')
+            })
+        })
+    </script>
+</body>
+
+</html>

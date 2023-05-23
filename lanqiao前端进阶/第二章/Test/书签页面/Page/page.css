@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #fff;
+    padding: 80px 30px 30px;
+    color: #444;
+    height: 100%;
+}
+h1 {
+    font-weight: bold;
+    color: #99bbab;
+}
+p { 
+    line-height: 1.6em;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 0;
+}
+a {
+    font-weight: bold;
+    color: #f7f6f7;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+a:hover,a:focus {
+    color: #f4f5db;
+}
+nav {
+    display: flex;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+nav:hover,nav:focus {
+     color: white;
+}
+nav .active {
+     color: #ffc478;
+}
+#s2 a{
+    color: #bbdfc8;
+}

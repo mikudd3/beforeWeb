@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box .head {
+            color: #CFE1A5;
+            border: 2px solid #CFE1A5;
+        }
+
+        .box .p {
+            border: 1px solid #000;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="head">荷花</div>
+        <div class="p">属毛茛目莲科，是莲属二种植物的通称。又名莲花、水芙蓉等，它是莲属多年生水生草本花卉。</div>
+    </div>
+    <script>
+        $(function () {
+            // 当点击荷花时，下面字体出现
+            $('.head').click(function () {
+                $("div:hidden").css("display", "block")
+            })
+            // 当点击内容又会被隐藏起来。
+            $('.p').click(
+                function () {
+                    $('.p:visible').css('display', 'none')
+                }
+            )
+        })
+    </script>
+</body>
+
+</html>

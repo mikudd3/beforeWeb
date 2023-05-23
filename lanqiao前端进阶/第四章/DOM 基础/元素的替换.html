@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>元素替换</title>
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            width: 290px;
+            height: 150px;
+            text-align: center;
+            margin-top: 20px;
+            border: 1px solid #cee6b4;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("div").click(function () {
+                // replaceWith 方法和 replaceAll 
+                //方法都可以用来把指定元素替换成其他元素，只是在使用格式上有些差别。
+                var $poem1 = $("<p>柳花深巷午鸡声，桑叶尖新绿未成。</p>");
+                var $poem2 = $("<p>坐睡觉来无一事，满窗晴日看蚕生。</p>");
+                $("#poem1").replaceWith($poem1);
+                $($poem2).replaceAll("#poem2");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <h3>四时田园杂兴</h3>
+        <p id="poem1">谷雨如丝复似尘，煮瓶浮蜡正尝新。</p>
+        <p id="poem2">牡丹破萼樱桃熟，未许飞花减却春。</p>
+    </div>
+</body>
+
+</html>

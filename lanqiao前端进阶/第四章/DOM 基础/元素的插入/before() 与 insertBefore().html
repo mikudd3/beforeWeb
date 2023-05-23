@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid #000;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        $(function () {
+            var i = 0;
+            var j = 0;
+            // 在元素的前面添加
+            // before 的使用
+            $("#div1").click(function () {
+                i++;
+                let $div = $(`<div>我喜欢 jQuery${i}</div>`)
+                $("#div1").before($div)
+            })
+            // insertBefore 的使用
+            $("#div2").click(function () {
+                j++;
+                var $div = $(`<div>I like jQuery${j}</div>`);
+                $($div).insertBefore("#div2");
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="div1">before</div>
+    <div id="div2">insertBefore</div>
+</body>
+
+</html>
