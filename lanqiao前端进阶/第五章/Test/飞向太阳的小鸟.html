@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>slideUp 和 slideDown 方法的使用</title>
+    <style>
+        #content {
+            width: 500px;
+            height: 500px;
+            background-color: #e4fbff;
+            position: relative;
+        }
+
+        #circle {
+            width: 100px;
+            height: 100px;
+            margin-left: 390px;
+            border-radius: 100%;
+            border: 1px solid #ffc93c;
+            box-shadow: 0 0 15px #ffc93c;
+            background: radial-gradient(#ffd3b4, #d5ecc2, #ffc93c, #e9896a);
+        }
+
+        img {
+            /*请补充此处代码*/
+            position: absolute;
+            left: 0;
+            /* left: 300px; */
+            top: 410px;
+            /* top: 0px; */
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $('img').animate({ left: '300px', top: '0px' }, 3000)
+        })
+    </script>
+</head>
+
+<body>
+    <div id="content">
+        <div id="circle"></div>
+        <!--请补充图片 url-->
+        <img src="https://labfile.oss.aliyuncs.com/courses/3774/icons8-flying-stork-80.png" />
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        div {
+            text-align: center;
+            margin-top: 100px;
+
+        }
+
+        strong {
+            color: blue;
+            font-size: 30px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('strong:nth-child(1)').fadeIn(1000)
+            $('strong:nth-child(2)').fadeIn(2000)
+            $('strong:nth-child(3)').fadeIn(3000)
+            $('strong:nth-child(4)').fadeIn(4000)
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <strong hidden>蓝</strong>
+        <strong hidden>桥</strong>
+        <strong hidden>云</strong>
+        <strong hidden>课</strong>
+    </div>
+</body>
+
+</html>

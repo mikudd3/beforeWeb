@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(function () {
+            $("#fadeTo").click(function () {
+                $('img').fadeTo(200, 0.2)
+            })
+            $("#reset").click(function () {
+                $('img').fadeTo(100, 1.0)
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <img src="https://labfile.oss.aliyuncs.com/courses/3774/animal1.jpg" width="300px" height="250px" /><br />
+    <input type="button" value="淡出" id="fadeTo" />
+    <input type="button" value="恢复" id="reset" />
+</body>
+
+</html>

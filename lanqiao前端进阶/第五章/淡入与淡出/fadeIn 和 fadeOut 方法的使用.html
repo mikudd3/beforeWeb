@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fadeIn 和 fadeOut 方法</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            float: left;
+            margin: 10px 0 0 10px;
+            text-align: center;
+        }
+
+        #item1 {
+            background-color: #28b5b5;
+        }
+
+        #item2 {
+            background-color: #8fd9a8;
+        }
+
+        #item3 {
+            background-color: #d2e69c;
+        }
+    </style>
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("div")
+                .mouseover(function () {
+                    $(this).fadeOut(500);
+                })
+                .mouseout(function () {
+                    $(this).fadeIn(500);
+                });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="item1"></div>
+    <div id="item2"></div>
+    <div id="item3"></div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>slideUp 和 slideDown 方法的使用</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            margin-top: 20px;
+            /*默认情况下，元素是 static 不能被移动，所以这里设置为 relative*/
+            position: relative;
+            background-color: lightskyblue;
+        }
+    </style>
+    <script>
+        $(function () {
+            // 以元素本身的宽度为基点加 100 个像素
+            $('.btn1').click(function () {
+                $('div').animate({ left: '+=100px' })
+            })
+            $('.btn2').click(function () {
+                $('div').animate({ width: '300px' })
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <button class="btn1">向右移动</button>
+    <button class="btn2">元素变长</button>
+    <div></div>
+</body>
+
+</html>

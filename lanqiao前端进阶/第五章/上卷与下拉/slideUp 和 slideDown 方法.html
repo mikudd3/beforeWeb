@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>slideUp 和 slideDown 方法的使用</title>
+    <style>
+        p {
+            color: rgb(0, 162, 255);
+            font-size: 30px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('#slideUp').click(function () {
+                //上卷
+                $('p').slideUp()
+            })
+            $('#slideDown').click(function () {
+                //下拉
+                $('p').slideDown()
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <p>欢迎来到蓝桥云课</p>
+    <input type="button" value="上卷" id="slideUp" />
+    <input type="button" value="下拉" id="slideDown" />
+</body>
+
+</html>

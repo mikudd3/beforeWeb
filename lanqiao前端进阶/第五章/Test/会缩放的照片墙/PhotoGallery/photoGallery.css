@@ -1,0 +1,31 @@
+.wrapper {
+    width: 40%;
+    margin: 40px auto;
+}
+div .gallery {
+    margin-top: 30px;
+}
+.gallery ul li {
+    list-style-type: none;/*去掉列表样式*/
+    margin-left: 35px;
+    position: relative;
+    float: left;
+    width: 130px;
+    height: 130px;
+    margin: 5px;
+    padding: 5px;
+    z-index: 0;
+}
+.gallery ul li:hover {
+    z-index: 5;
+}
+.gallery ul li img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #dddddd;
+    padding: 5px;
+    width: 130px;
+    height: 130px;
+    background-color: antiquewhite;
+}

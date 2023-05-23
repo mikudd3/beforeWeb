@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>slideUp 和 slideDown 方法的使用</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-size: 13px;
+            line-height: 130%;
+            padding: 60px;
+        }
+
+        #panel {
+            width: 300px;
+            border: 1px solid #0050d0;
+        }
+
+        .head {
+            padding: 5px;
+            background: #96e555;
+            cursor: pointer;
+        }
+
+        .content {
+            padding: 10px;
+            text-indent: 2em;
+            border-top: 1px solid #0050d0;
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            //需求: 点击标题后 显示 标题下面的div
+            $("#panel h5.head").bind("click", function () {
+                //让标题下面的div显示
+                var $obj = $(this).next();
+                $obj.toggle(2000); // 显示和隐藏切换
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="panel">
+        <h5 class="head">什么是jQuery?</h5>
+        <div class="content">
+            jQuery是继Prototype之后又一个优秀的JavaScript库，它是一个由 John Resig
+            创建于2006年1月的开源项目。jQuery凭借简洁的语法和跨平台的兼容性，极大地简化了JavaScript开发人员遍历HTML文档、操作DOM、处理事件、执行动画和开发Ajax。它独特而又优雅的代码风格改变了JavaScript程序员的设计思路和编写程序的方式。
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>slideUp 和 slideDown 方法的使用</title>
+    <style>
+        div {
+            color: #fff;
+            width: 350px;
+            height: 400px;
+            border: 1px solid #cdcdff;
+            background-color: #cdcdff;
+            box-shadow: 0 0 5px #907fa4;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('a').click(function () {
+                $('p').slideToggle()
+                // alert($('a').text())
+                $('a').text($('a').text() === '隐藏内容' ? '展开内容' : '隐藏内容')
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <p>中国科学家开启天文学新时代！</p>
+        <p>
+            国家重大科技基础设施“高海拔宇宙线观测站”在银河系内发现了大量超高能宇宙线加速器，
+            并且记录到最高1.4拍电子伏伽马光子（拍=千万亿）。无论是“嫦娥”奔赴月球，还是“祝融”登陆火星，
+            都说明了现代国人擅长的事情之一，便是用科技的力量续写古人的绮丽想象。
+            而今日，一项发表在Nature上的重大成果，不仅能同古人对话，或将改变人类对银河系的传统认知。
+        </p>
+        <a href="#" id="toggle">隐藏内容</a>
+    </div>
+</body>
+
+</html>

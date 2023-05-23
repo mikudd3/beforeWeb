@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>slideUp 和 slideDown 方法的使用</title>
+    <style>
+        p {
+            color: rgb(0, 162, 255);
+        }
+    </style>
+    <script>
+        $(function () {
+            $('h3').click(function () {
+                //上卷
+                $('p').slideToggle()
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <h3>蓝桥云课</h3>
+    <p>蓝桥云课是国内领先的IT在线编程及在线实训学习平台。</p>
+</body>
+
+</html>

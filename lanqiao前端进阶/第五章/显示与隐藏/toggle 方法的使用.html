@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            background: rgb(133, 185, 228);
+        }
+
+        button {
+            width: 100px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                // 使用 toggle 方法让元素在隐藏和显示之间切换。
+                $("div").toggle(500);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button>切换</button>
+    <div></div>
+</body>
+
+</html>

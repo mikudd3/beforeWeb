@@ -1,0 +1,40 @@
+* {
+    text-decoration: none;
+}
+body {
+    background-color: #e1eae5;
+}
+#container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.329);
+    background-color: #fff;
+}
+#btn {
+    float: right;
+    width: 27px;
+    padding: 2px;
+    position: fixed;
+    background-color: #393e46;
+    margin: 0 0 0 430px;
+    text-align: center;
+}
+#btn a {
+    color: #d8e3e7;
+    display: block;
+    padding: 5px;
+}
+#btn a:hover {
+    color: #fff;
+    background-color: #000;
+}
+#small {
+    font-size: 10px;
+}
+#medium {
+    font-size: 15px;
+}
+#large {
+    font-size: 20px;
+}

@@ -1,0 +1,36 @@
+/*进度条长度*/
+.progress-bar {
+    position: relative;
+    display: block;
+    float:left;
+    width: 50%;
+    height: 35px;
+    margin-bottom: 15px;
+    background: #faf3f3;
+    border-radius: 10px;
+}
+/*加载时的颜色显示*/
+.bar {
+    height: 35px;
+    width: 0px;
+    background: #c6ffc1;
+}
+/*进度条百分比*/
+.progress-bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 11px;
+    height: 35px;
+    line-height: 35px;
+    color: #444;
+}
+/*按钮*/
+#btn {
+    width: 70px;
+    height: 35px;
+    margin-left: 5px;
+    border-radius: 20px;
+    background: #faf3f3;
+    font-size: 17px;
+}
