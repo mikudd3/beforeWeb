@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>find</title>
+    <style>
+        div ul li {
+            display: inline-block;
+            float: left;
+            width: 60px;
+            height: 30px;
+            border: 1px solid blueviolet;
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('div').click(function(){
+                $(this).find('li').css('text-align','center')
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>首页</li>
+            <li>课程</li>
+            <li>会员</li>
+            <li>更多</li>
+        </ul>
+    </div>
+</body>
+
+</html>

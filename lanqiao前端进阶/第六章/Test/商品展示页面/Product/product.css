@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #eeecda;
+}
+.product{
+    width: 100%;
+    height: auto;
+    margin-left: 30%;
+}
+/*食物图片*/
+.product img {
+    width: 200px;
+    height: 250px;
+    float:left;
+    margin-right: 30px;
+}
+/*食物名称*/
+.product--title {
+    color: #008080;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 20px 0;
+}
+.product--title h2 {
+    display: inline-block;
+    border-bottom: 2px dashed;
+}
+/*食物描述*/
+.product--desc {
+    padding-top: 15px;
+    color: #707070;
+}
+/*最热标签*/
+.product--price_offer {
+    color: #f39189;
+    border: 1px solid #f39189;
+    font-size: 12px;
+    padding: 1px 3px;
+    border-radius: 5px;
+}
+/*饮料块*/
+  .product--drink {
+    margin: 20px 0;
+}
+/*饮料选项*/
+.product--drink span {
+    display: inline-block;
+    border: 1px solid #999;
+    border-radius: 4px 4px;
+    text-align: center;
+    padding: 1px 2px;
+    cursor: pointer;
+}
+/*选择搭配饮料*/
+  .active {
+    color: #fff;
+    background: #008080;
+}
+/*添加购物车的按钮*/
+.add-to-cart {
+    margin: 20px 10px 10px 0;
+}
+.add-to-cart .btn {
+    border: 1px solid #f39189;
+    border-radius: 2px;
+    padding: 5px 10px;
+    position: relative;
+    overflow: hidden;
+}
+.add-to-cart .btn:hover,
+.add-to-cart .btn:focus {
+    background: #f38189;
+    color: #fff;
+    text-shadow: 2px 2px 3px #666;
+}

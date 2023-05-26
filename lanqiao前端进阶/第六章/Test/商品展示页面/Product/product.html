@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品展示页面</title>
+    <link rel="stylesheet" href="product.css">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <script src="product.js"></script>
+</head>
+<body>
+    <div class="product">
+  
+      <!--标题-->
+      <div class="product--title">
+        <h2>夏日甜甜圈</h2>
+      </div>
+  
+      <!--产品展示窗口-->
+      <div class="product--body">
+  
+        <!--商品展示图-->
+        <div class="product--image">
+          <img src="dessert.jpeg"/>
+        </div>
+  
+        <!--商品介绍-->
+        <div class="product--details">
+          <!--商品价格-->
+          <div class="product--price">
+            价格：
+            <span class="product--price_price"> 80 元</span>
+            <span class="product--price_offer">最热</span>
+          </div>
+  
+          <!--商品描述-->
+          <div class="product--desc"><p>这是夏日新品，每日仅限 300 份~</p></div>
+          
+          <!--搭配饮料-->
+          <div class="product--drink">
+            搭配饮料：
+            <span>柠檬茶</span>
+            <span class="active">咖啡</span>
+            <span>牛奶</span>
+          </div>
+  
+          <!--商品数量-->
+          <div class="product--quantity">
+            购买数量：
+            <input class="quantity" type="number" placeholder="quantity" min="1" max="10" value="1"></input>
+          </div>
+  
+          <!--添加到购物车的按钮-->
+          <div class="add-to-cart">
+            <button class="btn">购买</button>
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  </body>
+</html>

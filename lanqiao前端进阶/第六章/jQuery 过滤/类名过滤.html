@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>hasClass</title>
+    <style>
+        div {
+            float: left;
+            margin-right: 10px;
+            width: 50px;
+            height: 50px;
+            border: 1px solid;
+        }
+
+        .div2 {
+            background-color: #b6c9f0;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('div').click(function () {
+                let value = $(this).hasClass('div2')
+                if (!value) {
+                    $(this).addClass('div2')
+                } else {
+                    alert("该元素已应用 div2 样式")
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

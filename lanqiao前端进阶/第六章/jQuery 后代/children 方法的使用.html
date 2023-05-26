@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>children</title>
+    <style>
+        div {
+            width: 300px;
+            height: 170px;
+            border: 1px solid;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('div').click(function () {
+                $(this).children('#title').css('font-size', '25px')
+                $(this).children().css('text-align', 'center')
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <p id="title">日出东南隅行</p>
+        <p>秦楼出佳丽，正值朝日光。</p>
+        <p>陌头能驻马，花处复添香。</p>
+    </div>
+</body>
+
+</html>

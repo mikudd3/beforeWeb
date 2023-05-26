@@ -1,0 +1,35 @@
+body {
+    background: #CCF2F4;
+}
+nav {
+    margin-top: 60px;
+}
+nav .down {
+    list-style: none;
+    overflow: hidden; 
+    width: 200px;
+    height: 183px; 
+    background-color: #8AC4D0;
+    margin: 0 auto; /*菜单居中*/
+    padding: 0;
+    text-align: center;
+}
+nav .down.fold {
+    height: 43px;
+}
+nav .down li {
+    border-bottom: 5px solid #CCF2F4;
+}
+nav .down li a {
+    display: block;
+    padding: 10px;
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 10px;
+}
+nav .down li:first-child a:after {
+    content: "\25BC"; /*向下箭头特殊字符*/
+    float: right;
+    margin-left: -30px;
+    margin-right: 5px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery.color-2.1.2.min.js"></script>
+    <title>jQuery 祖先</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            border: 2px solid;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("div").hover(
+                function () {
+                    // 当鼠标放在元素上时，给整个列表添加一个背景颜色
+                    $("li").parent().css("background-color", "#edffec");
+                },
+                function () {
+                    // 当鼠标移出元素时，所有父辈的字体颜色都会发生改变
+                    $("li").parents().css("color", "#f2a154");
+                }
+            );
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <h4>任务清单</h4>
+        <ul>
+            <li>晨读</li>
+            <li>练字</li>
+            <li>画画</li>
+        </ul>
+    </div>
+</body>
+
+</html>
