@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>getJSON 的使用</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        body {
+            text-align: center;
+        }
+    </style>
+    <script>
+        $(function () {
+            // 如地址失效，可以使用 https://labfile.oss.aliyuncs.com/courses/3774/users.json
+            $("input").click(function () {
+                $.getJSON(
+                    "https://jsonplaceholder.typicode.com/users",
+                    function (data, textStatus) {
+                        alert(textStatus);
+                        $.each(data, function (i, val) {
+                            $("ul").append("<li>" + val.name + "<li>");
+                        });
+                    }
+                );
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="按照JSON格式加载数据" />
+    <ul></ul>
+</body>
+
+</html>

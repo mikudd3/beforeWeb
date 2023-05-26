@@ -1,0 +1,18 @@
+div {
+    width: 450px;
+    height: 250px;
+    border: 1px solid #a6d6d6;
+    text-align: center;
+    color: #aee1e1;
+    box-shadow: 3px 3px 20px #aaaaaa;
+}
+p {
+    margin: 80px 30px;
+    font-size: 18px;
+    
+}
+button {
+    margin-top: 10px;
+    width: 224px;
+    color: #bbbbbb;
+}

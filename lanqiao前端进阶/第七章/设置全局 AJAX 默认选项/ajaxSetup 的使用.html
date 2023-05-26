@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>ajaxSetup 的使用</title>
+    </script>
+    <script>
+        $(function () {
+            // 设置默认 url 和 type
+            $.ajaxSetup({
+                // 如地址失效，可以使用 https://labfile.oss.aliyuncs.com/courses/3774/users.json
+                url: "https://jsonplaceholder.typicode.com/users",
+                type: "GET",
+            });
+            $("#get_name").click(function () {
+                $.ajax({
+                    success: function (users) {
+                        $.each(users, function (i, order) {
+                            $("#name").append("<li>" + order.name + "</li>");
+                        });
+                    },
+                });
+            });
+            $("#get_email").click(function () {
+                $.ajax({
+                    success: function (users) {
+                        $.each(users, function (i, order) {
+                            $("#email").append("<li>" + order.email + "</li>");
+                        });
+                    },
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="get_name">获取名字</button>
+    <ul id="name"></ul>
+    <button id="get_email">获取邮件</button>
+    <ul id="email"></ul>
+</body>
+
+</html>

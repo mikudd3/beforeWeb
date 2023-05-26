@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>数据加载</title>
+    <script>
+        $(function () {
+            // 设置默认 url 和 type
+            $.ajaxSetup({
+                // 如地址失效，可以使用 https://labfile.oss.aliyuncs.com/courses/3774/users.json
+                url: "https://jsonplaceholder.typicode.com/users",
+                type: "GET",
+            });
+            //获取数据
+            $.ajax({
+                success: function (users) {
+                    $.each(users, function (i, order) {
+                        $("#results").append("<li>" + order.name + "</li>");
+                    });
+                },
+                error: function () {
+                    alert("数据请求失败");
+                },
+            })
+            // 添加新数据
+            $("#addName").click(function () {
+                $.ajax({
+                    success: function () {
+                        $("#results").append("<li>" + $("#name").val() + "</li>");
+                    },
+                    error: function () {
+                        alert("请求失败");
+                    },
+                });
+            });
+
+
+
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="results"></div>
+    <!--当前添加的所有名字-->
+    名字：<input type="text" id="name" /><!--名字输入框-->
+    <button id="addName">添加</button><!--添加名字的按钮-->
+</body>
+
+</html>

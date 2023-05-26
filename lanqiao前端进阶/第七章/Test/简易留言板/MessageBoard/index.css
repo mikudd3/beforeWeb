@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+  }
+  form {
+    border: 1px solid #a7bbc7;
+    width: 320px;
+    height: 270px;
+    box-shadow: 2px 2px 20px #c8c2bc;
+    margin-left: 40%;
+  }
+  #btn {
+    width: 220px;
+  }

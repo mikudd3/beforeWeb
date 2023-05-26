@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>抓取用户数据</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('.btn').click(function () {
+                $.get('https://jsonplaceholder.typicode.com/users', function (data, status) {
+                    // 点击按钮，向如下链接发出 GET 请求，
+                    // 获取该文件中的 id、name、username、email 等信息以列表的形式展现的页面上。
+                    // console.log(data);
+                    $.each(data, function (index, element) {
+                        //写入标签
+                        $('ul').append(
+                            $('<li>', { text: 'ID:' + element.id }),
+                            $('<li>', { text: '姓名:' + element.name }),
+                            $('<li>', { text: '用户名:' + element.username }),
+                            $('<li>', { text: '邮箱:' + element.email }),
+                            $('<li>', { text: '----------------------' }),
+                        )
+                    })
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <button class="btn">获取用户信息</button>
+    <ul>
+        <!-- <li>1</li> -->
+    </ul>
+</body>
+
+</html>

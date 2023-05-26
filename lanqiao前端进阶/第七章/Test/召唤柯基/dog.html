@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #dog {
+            position: relative;
+        }
+
+        #bowl {
+            margin-left: 400px;
+        }
+    </style>
+    <script src="./jquery-3.7.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#dog").animate({ left: "+=420px" }, 5000);
+        })
+    </script>
+</head>
+
+<body>
+    <img src="https://labfile.oss.aliyuncs.com/courses/3774/icons8-corgi-80.png" id="dog" />
+    <img src="https://labfile.oss.aliyuncs.com/courses/3774/icons8-dog-bowl-80.png" id="bowl" />
+</body>
+
+</html>

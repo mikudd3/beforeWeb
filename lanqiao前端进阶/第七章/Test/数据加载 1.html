@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>数据加载 1</title>
+    <script>
+        $(function () {
+            $('.btn').click(function () {
+                // 在数据加载过程中会在按钮下方显示文字 「加载中...」。
+                $('p').text('加载中...')
+
+                $.ajax({
+                    type: "GET",
+                    url: "https://labfile.oss.aliyuncs.com/courses/3774/users.json",
+                    success: function (data) {
+                        let $data = JSON.stringify(data)
+                        $('p').text($data)
+                    },
+                    error: function () {
+                        alert("数据请求失败");
+                    },
+                });
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <!-- 页面上有一个「加载数据」的按钮和一对 p 标签用于存放加载的数据。 -->
+    <button class="btn">加载数据</button>
+    <p></p>
+</body>
+
+</html>

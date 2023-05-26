@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <title>post 方法的使用</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("input").click(function () {
+                // 如果链接失效，可以试试 https://labfile.oss.aliyuncs.com/courses/3774/posts.json
+                $.post("https://jsonplaceholder.typicode.com/posts", function (
+                    data,
+                    textStatus
+                ) {
+                    $("p").append(textStatus);
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="请求数据" />
+    <p>请求状态：</p>
+</body>
+
+</html>

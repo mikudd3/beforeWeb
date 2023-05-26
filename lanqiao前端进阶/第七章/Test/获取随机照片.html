@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>获得随机照片</title>
+    <style>
+        /*让页面内容居中，请补充 CSS*/
+        body {
+            text-align: center;
+        }
+    </style>
+    <script src="https://labfile.oss.aliyuncs.com/courses/3774/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $.getJSON('https://randomuser.me/api/',
+                function (userData) {
+                    // 获取数据文件
+                    var data = userData.results[0];
+                    // console.log(data);
+                    // 从中获取姓（last）、名（frist）以及 medium 大小的照片 。
+                    // 获取名字
+                    let name = data.name
+                    // 姓（last）
+                    let last = name.last
+                    // 名（first）
+                    let first = name.first
+                    // 获取照片
+                    let picture = data.picture
+                    // medium 大小的照片
+                    let medium = picture.medium
+                    // 信息写入页面中
+                    $('#firstName').text(first)
+                    $('#lastName').text(last)
+                    $('#photo').html(`<img src="${medium}">`)
+                });
+        })
+    </script>
+</head>
+
+<body>
+    <span id="firstName"></span>
+    <span id="lastName"></span>
+    <div id="photo"></div>
+    <img src="" alt="">
+</body>
+
+</html>

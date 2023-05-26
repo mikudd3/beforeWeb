@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>召唤柯基</title>
+  <style>
+    #bowl {
+      margin-left: 400px;
+    }
+  </style>
+  <script src="./jquery-3.7.0.min.js"></script>
+  <script>
+    $(function () {
+      $(document).ajaxStart(function () {
+        console.log('召唤开始')
+        $('#start').text('召唤开始')
+      })
+      $("button").click(function () {
+        $("div").load("dog.html")
+        console.log('召唤中.....')
+      })
+      $(document).ajaxStop(function () {
+        $('#stop').text('柯基出来了')
+        console.log('柯基出来了');
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <button>召唤</button>
+  <p id="start"></p>
+  <div></div>
+  <p id="stop"></p>
+</body>
+
+</html>
