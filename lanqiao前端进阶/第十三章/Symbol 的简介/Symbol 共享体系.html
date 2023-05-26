@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let classid = Symbol.for("class id");
+        let object = {
+            [classid]: "2",
+        };
+        console.log(object[classid]);
+        console.log(classid);
+
+        let classid2 = Symbol.for("class id");
+        console.log(classid === classid2);
+        console.log(object[classid2]);
+        console.log(classid2);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var outnum = function (n, callback) {
+            setTimeout(function () {
+                console.log(n);
+                callback();
+            }, 1000);
+        };
+        outnum("1", function () {
+            outnum("2", function () {
+                outnum("3", function () {
+                    console.log("0");
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

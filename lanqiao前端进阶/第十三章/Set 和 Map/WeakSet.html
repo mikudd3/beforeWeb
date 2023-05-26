@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let s = new WeakSet();
+        let obj = { msg: "同学们好！" };
+        s.add(obj);
+        console.log(s.has(obj));
+        s.delete(obj);
+        console.log(s.has(obj));
+    </script>
+</body>
+
+</html>

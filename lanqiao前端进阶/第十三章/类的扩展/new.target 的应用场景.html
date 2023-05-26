@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor() {
+                // 如果实例化对象使用的是 Person 类，则抛出错误
+                if (new.target === Person) {
+                    throw new Error("Person 类不能被实例化。");
+                }
+            }
+        }
+        class Occupation extends Person {
+            constructor(name, occupation) {
+                super();
+            }
+        }
+        let person1 = new Person();
+    </script>
+</body>
+
+</html>

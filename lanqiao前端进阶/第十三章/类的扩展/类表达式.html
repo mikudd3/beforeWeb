@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ES5 语法
+        function DogType(name) {
+            this.name = name;
+        }
+        DogType.prototype.sayName = function () {
+            console.log("大家好！我是一只小" + this.name + "。");
+        };
+        let dog = new DogType("柯基");
+        dog.sayName();
+        console.log(dog instanceof DogType);
+        console.log(dog instanceof Object);
+    </script>
+</body>
+
+</html>

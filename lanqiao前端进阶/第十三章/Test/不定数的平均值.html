@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>求平均值</title>
+</head>
+
+<body>
+    <script>
+        const average = (...nums) => {
+            if (nums.length < 2) {
+                console.log("传参不能小于 2.");
+                return;
+            }
+            const sum = nums.reduce((acc, cur) => {
+                if (typeof cur === "string") {
+                    cur = parseInt(cur);
+                }
+                return acc + cur;
+            }, 0);
+            return sum / nums.length;
+        };
+    </script>
+</body>
+
+</html>

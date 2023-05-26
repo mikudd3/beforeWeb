@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            function timeOut() {
+                return new Promise(function (resolve, reject) {
+                    setTimeout(function () {
+                        reject("请求超时");
+                    }, 5000);
+                });
+            }
+            function loadData() {
+                return new Promise(function (resolve, reject) {
+                    setTimeout(function () {
+                        resolve("请求成功");
+                    }, 3000);
+                });
+            }
+            Promise.race([loadData(), timeOut()]).then(
+                function (d) {
+                    console.log(d);
+                },
+                function (e) {
+                    console.log(e);
+                }
+            );
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>

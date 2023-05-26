@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Employee {
+            constructor(name, gender, phone, address, position) {
+                this.name = name;
+                this.gender = gender;
+                this.phone = phone;
+                this.address = address;
+                this.position = position;
+            }
+
+            getInfo() {
+                console.log(`姓名：${this.name}`);
+                console.log(`性别：${this.gender}`);
+                console.log(`电话：${this.phone}`);
+                console.log(`地址：${this.address}`);
+                console.log(`职位：${this.position}`);
+            }
+        }
+
+        class Manager extends Employee {
+            constructor(name, gender, phone, address, position, salary) {
+                super(name, gender, phone, address, position);
+                this.salary = salary;
+            }
+
+            getInfo() {
+                super.getInfo();
+                console.log(`薪资：${this.salary}`);
+            }
+        }
+
+
+        let manager = new Manager(
+            "小白",
+            "男",
+            "1234567",
+            "兔子街道001",
+            "服务员",
+            "5000"
+        );
+        manager.getInfo();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        class Diary {
+            constructor(fileName, content) {
+                this.fileName = fileName;
+                this.content = content;
+            }
+
+            getContents() {
+                let map = new Map();
+                map.set(this.fileName, this.content)
+                map.forEach((value, key) => {
+                    console.log(`${key}"中写入"${value}"`);
+                });
+            }
+
+            deleteSuffix() {
+                let index = this.fileName.lastIndexOf(".");
+                this.fileName = this.fileName.substring(0, index);
+                console.log(this.fileName + ":" + this.content);
+            }
+
+        }
+        let diary1 = new Diary("2021/10/1.txt", "放假了，我可以睡懒觉了！");
+        diary1.getContents();
+        let diary2 = new Diary("2021/10/2.txt", "今天，我和妈妈爸爸去爬山，真开心。");
+        diary2.deleteSuffix();
+    </script>
+</body>
+
+</html>

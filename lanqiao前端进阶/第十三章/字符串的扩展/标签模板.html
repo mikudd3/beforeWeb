@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function tag(literals, ...values) {
+            let result = ""; // result 变量用来存放重组后的数组
+            // 根据 values 的数量来确定遍历的次数
+            for (let i = 0; i < values.length; i++) {
+                result += literals[i];
+                result += values[i];
+            }
+            // 合并最后一个 literals
+            result += literals[literals.length - 1];
+            return result;
+        }
+        let name = `JavaScript`;
+        let str = tag`Welcome to ${name} course.`;
+        console.log(str);
+    </script>
+</body>
+
+</html>

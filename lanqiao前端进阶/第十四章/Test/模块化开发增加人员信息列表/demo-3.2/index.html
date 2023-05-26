@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 320px;
+            border: solid 1px #555;
+            border-bottom: none;
+        }
+
+        ul>li {
+            overflow: hidden;
+            border-bottom: solid 1px #555;
+            padding: 8px 12px;
+        }
+
+        ul>li>span {
+            display: inline-block;
+            width: 80px;
+        }
+
+        li.header {
+            font-weight: 700;
+            background-color: #ccc;
+            padding: 8px 12px;
+        }
+
+        form {
+            background-color: #ccc;
+            width: 306px;
+            padding: 8px;
+            margin-top: 8px;
+        }
+
+        form div {
+            margin: 10px 0;
+        }
+
+        form div label {
+            display: inline-block;
+            width: 40px;
+            text-align: right;
+        }
+
+        form div input {
+            padding: 3px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="ul">
+
+    </ul>
+    <form>
+        <div>
+            <label for="name">姓名:</label>
+            <input type="text" id="name" placeholder="请求输入姓名" name="name">
+        </div>
+        <div>
+            <label for="sex">性别:</label>
+            <select name="sex" id="sex">
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
+        </div>
+        <div>
+            <label for="age">年龄:</label>
+            <input type="number" name="age" id="age">
+        </div>
+        <div class="btns">
+            <label>&nbsp;</label>
+            <input type="button" id="btn" value="提交">
+            <input type="reset" value="取消">
+        </div>
+    </form>
+
+    <script type="module">
+        // 输入页面逻辑层模块
+        import plogic from "./plogic.js"
+        // 调用逻辑层显示数据方法
+        plogic.showStuInfo();
+        // 调用逻辑层绑定事件方法
+        plogic.bindEvent();
+    </script>
+</body>
+
+</html>

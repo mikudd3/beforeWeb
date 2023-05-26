@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(name) {
+                this.name = name;
+                console.log(new.target.name);
+            }
+        }
+        class Occupation extends Person {
+            constructor(name, occupation) {
+                super(name);
+                this.occupation = occupation;
+            }
+        }
+        let person = new Person("小白");
+        let occupation = new Occupation("小蓝", "前端工程师");
+    </script>
+</body>
+
+</html>

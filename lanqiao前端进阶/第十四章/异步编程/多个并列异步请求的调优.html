@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 函数 p 返回的是一个 Promise 对象，在对象中，延时 2 秒，执行成功回调函数，相当于模拟一次异步请求
+        function p(v) {
+            return new Promise(function (resolve) {
+                setTimeout(function () {
+                    // 在 p 函数执行时，将函数的实参值 v ，作为执行成功回调函数的返回值。
+                    resolve(v);
+                }, 2000);
+            });
+        }
+        async function fn() {
+            await Promise.all([p("a"), p("b"), p("c")]);
+            console.log("隐藏加载动画！");
+        }
+        fn();
+    </script>
+</body>
+
+</html>

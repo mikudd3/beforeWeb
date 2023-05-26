@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Animal {
+            static place = "游乐园";
+            constructor(name, speed) {
+                this.name = name;
+                this.speed = speed;
+            }
+            // place 静态属性是类本身的属性，不是实例对象，所以这里不能用 this.place
+            run() {
+                console.log(
+                    `名为${this.name}的狗狗在${Animal.place}里酷跑了 ${this.speed} 公里。`
+                );
+            }
+            static compare(animal1, animal2) {
+                return animal1.speed - animal2.speed;
+            }
+        }
+        class Dog extends Animal { }
+        // 实例化
+        let dogs = [new Dog("闷墩儿", 7), new Dog("乐乐", 4)];
+        dogs[0].run();
+        dogs[1].run();
+        // 继承静态方法
+        console.log(`闷墩儿比乐乐多跑了 ${Dog.compare(dogs[0], dogs[1])} 公里。`);
+        // 继承静态属性
+        console.log(`奔跑地点：${Dog.place}。`);
+    </script>   
+</body>
+
+</html>

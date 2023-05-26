@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const COLOR = Symbol();
+        const BRAND = Symbol();
+
+        class Bike {
+            constructor(color, brand) {
+                this[COLOR] = color;
+                this[BRAND] = brand;
+            }
+
+            get color() {
+                return this[COLOR];
+            }
+
+            get brand() {
+                return this[BRAND];
+            }
+        }
+
+        let bike = new Bike('蓝色', '捷安特');
+        console.log(`我买了一辆${bike.color}的${bike.brand}自行车。`);
+    </script>
+</body>
+
+</html>

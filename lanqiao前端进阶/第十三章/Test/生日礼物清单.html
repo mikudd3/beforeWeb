@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const gifts = new Map([
+            ['小红', '一箱零食'],
+            ['小白', '一件衣服'],
+            ['小绿', '一个电脑包'],
+        ])
+
+        gifts.forEach(function (value, key) {
+            console.log(`${key}的生日快到了，我准备送${key}${value}`);
+        })
+    </script>
+</body>
+
+</html>
